@@ -8,8 +8,11 @@ app = FastAPI()
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
     try:
-        # 读取 README.md 文件内容
-        with open("README.md", "r", encoding="utf-8") as f:
+        # 动态获取根目录下的 README.md
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        readme_path = os.path.join(base_dir, "README.md")
+        
+        with open(readme_path, "r", encoding="utf-8") as f:
             md_content = f.read()
         
         # 将 Markdown 转换为 HTML
