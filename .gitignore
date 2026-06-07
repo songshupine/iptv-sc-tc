@@ -1,0 +1,16 @@
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.tef_dist/*
+
+# Dependencies
+node_modules
+package-lock.json
+
+# Next.js
+.next
+next-env.d.ts
+
+# Python
+__pycache__
+*.pyc
