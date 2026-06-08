@@ -1,5 +1,5 @@
 # cloud-functions/udpxy/index.py
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.responses import Response
 import os
 import re
@@ -11,14 +11,15 @@ DEFAULT_IP = "192.168.100.1:4022"
 
 # 定义路径前缀与 home 目录下 m3u8 文件的映射关系
 FILE_MAP = {
-    "udpxy": "udpxy_iptv.m3u8",
-    "udpxy_cmcc": "udpxy_cmcc_iptv.m3u8",
-    "udpxy_cun": "udpxy_cun_iptv.m3u8",
+    "/udpxy/": "udpxy_iptv.m3u8",
+    "/udpxy_cmcc/": "udpxy_cmcc_iptv.m3u8",
+    "/udpxy_cun/": "udpxy_cun_iptv.m3u8",
 }
 
-@app.get("/{rule_name}/{domain}/{path:path}")
+# 【核心修改】路由不再接收 rule_name，只接收 domain 和 path
+@app.get("/{domain}/{path:path}")
 async def proxy_m3u8(
-    rule_name: str, 
+    request: Request,
     domain: str, 
     path: str = "",
     aptv: str = None,
@@ -26,13 +27,23 @@ async def proxy_m3u8(
     r2h_token: str = None,
     rtspProxy: str = None
 ):
-    # 1. 检查文件映射是否存在
-    file_name = FILE_MAP.get(rule_name)
+    # 1. 通过请求的原始路径来判断应该读取哪个文件
+    original_path = request.url.path
+    file_name = None
+    for prefix, name in FILE_MAP.items():
+        if original_path.startswith(prefix):
+            file_name = name
+            break
+            
     if not file_name:
-        return Response(content=f"Unknown route: {rule_name}", status_code=404)
+        return Response(content="Unknown route", status_code=404)
 
     # 2. 读取 home 目录下的 m3u8 文件
-    file_path = os.path.join("home", file_name)
+    # 注意：在 EdgeOne 中，如果 home 目录与 cloud-functions 同级，
+    # 建议使用绝对路径或基于 __file__ 的相对路径
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "..", "..", "home", file_name)
+    
     try:
         if not os.path.exists(file_path):
             return Response(content=f"File not found: {file_name}", status_code=404)
@@ -56,7 +67,6 @@ async def proxy_m3u8(
         lines = m3u_text.split("\n")
         for i, line in enumerate(lines):
             if "/udp/" in line:
-                # 判断当前行是否已有查询参数
                 if "?" in line:
                     if fcc: lines[i] += f"&fcc={fcc}"
                     if r2h_token: lines[i] += f"&r2h-token={r2h_token}"
@@ -69,19 +79,16 @@ async def proxy_m3u8(
 
     # 6. RTSP 代理替换
     if rtspProxy:
-        # 确保 rtspProxy 带有 http 前缀
         if not rtspProxy.startswith("http"):
             rtspProxy = f"http://{rtspProxy}"
             
         lines = m3u_text.split("\n")
         for i, line in enumerate(lines):
             if 'catchup-source="rtsp://' in line:
-                # 替换 rtsp 协议前缀
                 lines[i] = line.replace(
                     'catchup-source="rtsp://', 
                     f'catchup-source="{rtspProxy}/rtsp/'
                 )
-                # 如果同时传了 r2h-token，处理 playseek 参数
                 if r2h_token:
                     lines[i] = re.sub(
                         r'(playseek=[^"&]*)', 
