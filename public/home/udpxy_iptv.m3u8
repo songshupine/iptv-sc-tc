@@ -1,0 +1,39 @@
+#EXTM3U name="成都电信IPTV - 2026-06-07 14:21:38" x-tvg-url="https://epg.gotonas.com/t.xml.gz"
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV1.png" tvg-id="CCTV1" tvg-name="CCTV1" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221228807/10000100000000060000000003732597_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV1
+http://192.168.100.1:4022/udp/239.94.0.31:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV2.png" tvg-id="CCTV2" tvg-name="CCTV2" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221227983/10000100000000060000000003751359_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV2
+http://192.168.100.1:4022/udp/239.94.0.2:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV3.png" tvg-id="CCTV3" tvg-name="CCTV3" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221228795/736387786.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV3
+http://192.168.100.1:4022/udp/239.94.0.32:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV4.png" tvg-id="CCTV4" tvg-name="CCTV4" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221227928/10000100000000060000000003751404_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV4
+http://192.168.100.1:4022/udp/239.94.0.4:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV5.png" tvg-id="CCTV5" tvg-name="CCTV5" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221228800/764702828.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV5
+http://192.168.100.1:4022/udp/239.94.0.33:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV6.png" tvg-id="CCTV6" tvg-name="CCTV6" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221228859/736387970.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV6
+http://192.168.100.1:4022/udp/239.94.0.34:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV7.png" tvg-id="CCTV7" tvg-name="CCTV7" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221227989/10000100000000060000000003751413_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV7
+http://192.168.100.1:4022/udp/239.94.0.7:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV8.png" tvg-id="CCTV8" tvg-name="CCTV8" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221228805/764702766.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV8
+http://192.168.100.1:4022/udp/239.94.0.35:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV9.png" tvg-id="CCTV9" tvg-name="CCTV9" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221227993/10000100000000060000000003751454_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV9
+http://192.168.100.1:4022/udp/239.94.0.9:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV10.png" tvg-id="CCTV10" tvg-name="CCTV10" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221227995/10000100000000060000000003751458_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV10
+http://192.168.100.1:4022/udp/239.94.0.10:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV11.png" tvg-id="CCTV11" tvg-name="CCTV11" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221228864/585434595.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV11
+http://192.168.100.1:4022/udp/239.94.0.36:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV12.png" tvg-id="CCTV12" tvg-name="CCTV12" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221227986/10000100000000060000000003751507_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV",CCTV12
+http://192.168.100.1:4022/udp/239.94.0.12:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV13.png" tvg-id="CCTV13" tvg-name="CCTV13" catchup="default" catchup-days="5" catchup-source="rtsp://182.139.234.40/PLTV/88888896/224/3221228443/585434699.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}
