@@ -18,7 +18,7 @@ FILE_MAP = {
 # ==========================================
 # 1. 新增：参数调试接口
 # ==========================================
-@app.get("/{full_path:path}")
+@app.get("/api/udpxy/debug")
 async def debug_params(request: Request):
     """
     将收到的所有查询参数以 JSON 格式返回，方便前端调试
@@ -34,7 +34,7 @@ async def debug_params(request: Request):
 # ==========================================
 # 2. 原有的业务接口
 # ==========================================
-@app.get("/api/udpxy/test")
+@app.get("/{full_path:path}")
 async def proxy_m3u8(
     request: Request,
     file: str = Query(..., description="文件类型，如 udpxy, udpxy_cmcc"),
