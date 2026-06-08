@@ -1,7 +1,7 @@
 {
   "routes": [
     {
-      "path": "/api/udpxy/*",
+      "path": "/api/udpxy",
       "function": "udpxy/index.py"
     }
   ]
