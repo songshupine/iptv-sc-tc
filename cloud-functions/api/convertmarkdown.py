@@ -1,45 +1,30 @@
 # cloud-functions/api/convertmarkdown.py
-import sys
-import os
-import json
-import markdown  # 引入 markdown 模块
+from fastapi import FastAPI
+from pydantic import BaseModel
+import markdown
 
-# 确保当前目录在搜索路径中（兼容 EdgeOne 环境）
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+app = FastAPI()
 
-def main_handler(event, context):
+# 定义请求体模型，FastAPI 会自动解析 JSON 并进行类型校验
+class MarkdownRequest(BaseModel):
+    markdown: str
+
+@app.post('/convertmarkdown')
+async def convert_markdown(request: MarkdownRequest):
+    """
+    接收 Markdown 文本并转换为 HTML
+    """
     try:
-        # 1. 获取请求方法
-        if request.method != 'POST':
-            return {
-                "statusCode": 405,
-                "headers": {"Content-Type": "application/json"},
-                "body": json.dumps({"error": "Method Not Allowed"})
-            }
-
-        # 2. 获取 POST 请求的 body
-        body = request.body
-        if isinstance(body, bytes):
-            body = body.decode('utf-8')
+        md_text = request.markdown
         
-        payload = json.loads(body)
-        md_text = payload.get("markdown", "")
+        # 使用 markdown 库进行转换
+        # extensions 启用了常用扩展：表格、代码块高亮、目录等
+        html_content = markdown.markdown(
+            md_text, 
+            extensions=['tables', 'fenced_code', 'toc']
+        )
 
-        # 3. 使用 markdown 模块转换
-        # extensions 可以根据需要添加，如 'tables', 'fenced_code' 等
-        html_content = markdown.markdown(md_text, extensions=['extra', 'codehilite', 'toc'])
-
-        # 4. 返回 JSON 响应
-        return {
-            "statusCode": 200,
-            "headers": {"Content-Type": "application/json"},
-            "body": json.dumps({"html": html_content})
-        }
+        return {"html": html_content}
 
     except Exception as e:
-        # 捕获异常并返回错误信息，方便调试
-        return {
-            "statusCode": 500,
-            "headers": {"Content-Type": "application/json"},
-            "body": json.dumps({"error": str(e)})
-        }
+        return {"error": str(e)}
