@@ -1,5 +1,5 @@
-from fastapi import FastAPI, Query
-from fastapi.responses import Response
+from fastapi import FastAPI, Request, Query
+from fastapi.responses import Response, JSONResponse
 import os
 import re
 
@@ -15,15 +15,30 @@ FILE_MAP = {
     "udpxy_cun": "udpxy_cun_iptv.m3u8",
 }
 
-# 统一入口：只接收查询参数
+# ==========================================
+# 1. 新增：参数调试接口
+# ==========================================
+@app.get("/api/udpxy/debug")
+async def debug_params(request: Request):
+    """
+    将收到的所有查询参数以 JSON 格式返回，方便前端调试
+    """
+    # 获取所有的查询参数（返回一个字典）
+    all_params = dict(request.query_params)
+    
+    return JSONResponse(content={
+        "message": "参数接收成功",
+        "received_params": all_params
+    })
+
+# ==========================================
+# 2. 原有的业务接口
+# ==========================================
 @app.get("/api/udpxy")
 async def proxy_m3u8(
-    # 必填参数：指定要读取的 m3u8 文件类型
+    request: Request,
     file: str = Query(..., description="文件类型，如 udpxy, udpxy_cmcc"),
-    # 必填参数：用于替换默认 IP 的目标 IP:Port
     ip: str = Query(..., description="替换后的目标 IP 和端口"),
-    
-    # 可选参数：通过默认值 None 表示非必填
     aptv: str = Query(None, description="aptv 参数"),
     fcc: str = Query(None, description="fcc 代理地址"),
     r2h_token: str = Query(None, description="r2h token"),
