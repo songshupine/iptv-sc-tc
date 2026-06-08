@@ -41,7 +41,9 @@ export default function Home() {
         setHtmlContent(data.html);
       } catch (err) {
         console.error('转换 Markdown 失败:', err);
-        setError(err.message || '未知错误');
+        // 使用类型断言，安全地获取错误信息
+        const errorMessage = err instanceof Error ? err.message : '未知错误';
+        setError(errorMessage);
       } finally {
         setLoading(false);
       }
