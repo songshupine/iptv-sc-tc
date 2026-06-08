@@ -4,7 +4,8 @@ from fastapi.responses import Response
 import os
 import re
 
-app = FastAPI()
+# 关闭尾部斜杠重定向
+app = FastAPI(redirect_slashes=False)
 
 # 默认需要被替换的 IP 地址
 DEFAULT_IP = "192.168.100.1:4022"
