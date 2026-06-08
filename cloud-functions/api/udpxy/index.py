@@ -3,40 +3,53 @@ from fastapi.responses import Response
 import os
 import re
 
-# 关闭 FastAPI 的自动斜杠重定向，防止 307 错误
+# 关闭 FastAPI 的自动斜杠重定向
 app = FastAPI(redirect_slashes=False)
 
 DEFAULT_IP = "192.168.100.1:4022"
 
 FILE_MAP = {
-    "udpxy": "udpxy_iptv.m3u8",
-    "udpxy_cmcc": "udpxy_cmcc_iptv.m3u8",
-    "udpxy_cun": "udpxy_cun_iptv.m3u8",
+    "/udpxy": "udpxy_iptv.m3u8",
+    "/udpxy_cmcc": "udpxy_cmcc_iptv.m3u8",
+    "/udpxy_cun": "udpxy_cun_iptv.m3u8",
 }
 
-# 【关键】使用 {full_path:path} 接收 Next.js 透传过来的所有路径
-@app.get("/{full_path:path}")
+# 【核心修改】同时匹配根路径和任意子路径，防止 404
+@app.api_route("/", methods=["GET"])
+@app.api_route("/{full_path:path}", methods=["GET"])
 async def proxy_m3u8(
     request: Request,
-    full_path: str,  # 例如: udpxy/192.168.2.30:8888
+    full_path: str = "",
     aptv: str = None,
     fcc: str = None,
     r2h_token: str = None,
     rtspProxy: str = None,
-    httpProxy: str = None  # 接收用户传入的 httpProxy 参数
+    httpProxy: str = None
 ):
-    # 1. 手动解析路径，提取 rule_name 和 domain
-    # full_path 格式为: "udpxy/192.168.2.30:8888"
-    path_parts = full_path.split("/")
-    if len(path_parts) < 2:
-        return Response(content="Invalid path format. Expected: /udpxy/IP:PORT", status_code=400)
-        
-    rule_name = path_parts
-    domain = path_parts
-    path = "/".join(path_parts[2:]) if len(path_parts) > 2 else ""[[source_group_web_1]]
+    # 1. 从原始请求路径中提取 rule_name 和 domain
+    # Next.js 转发后，request.url.path 可能是 /192.168.2.30:8888 或 /udpxy/192.168.2.30:8888
+    original_path = request.url.path
+    
+    # 去掉开头的斜杠并按 / 分割
+    path_parts = original_path.strip("/").split("/")
+    
+    # 判断第一段是不是规则名（udpxy等）
+    rule_name = None
+    domain = None
+    
+    if path_parts and path_parts in ["udpxy", "udpxy_cmcc", "udpxy_cun"]:
+        rule_name = path_parts
+        domain = path_parts if len(path_parts) > 1 else None
+    else:
+        # 如果 Next.js 已经剥离了 /udpxy，那么第一段直接就是 domain
+        rule_name = "udpxy" # 默认回退到 udpxy
+        domain = path_parts if path_parts else None[[source_group_web_1]]
+
+    if not domain:
+        return Response(content="Missing domain (IP:PORT)", status_code=400)
 
     # 2. 匹配对应的 m3u8 文件
-    file_name = FILE_MAP.get(rule_name)
+    file_name = FILE_MAP.get(f"/{rule_name}")
     if not file_name:
         return Response(content="Unknown route", status_code=404)
 
@@ -55,7 +68,7 @@ async def proxy_m3u8(
     # 4. aptv 替换
     if aptv is not None:
         m3u_text = m3u_text.replace(
-            "{utc:YmdHMS}-{utcend:YmdHMS}", 
+            "{utc:YmdHMS}-{utcend:YmdMS}", 
             "${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
         )
 
