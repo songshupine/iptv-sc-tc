@@ -18,7 +18,7 @@ FILE_MAP = {
 # ==========================================
 # 1. 新增：参数调试接口
 # ==========================================
-@app.get("/api/udpxy")
+@app.get("/{full_path:path}")
 async def debug_params(request: Request):
     """
     将收到的所有查询参数以 JSON 格式返回，方便前端调试
