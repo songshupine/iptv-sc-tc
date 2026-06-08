@@ -20,7 +20,7 @@ export default function Home() {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 5000); 
 
-        const pyRes = await fetch('/api/convert-markdown', {
+        const pyRes = await fetch('/api/convertmarkdown', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ markdown: mdText }),
