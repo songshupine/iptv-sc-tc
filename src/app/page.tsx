@@ -39,7 +39,7 @@ export default function Home() {
         if (data.error) throw new Error(data.error);
 
         setHtmlContent(data.html);
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error('转换 Markdown 失败:', err);
         setError(err.message || '未知错误');
       } finally {
