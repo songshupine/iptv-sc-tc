@@ -1,11 +1,14 @@
 # cloud-functions/api/main.py
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import markdown
+import sys
+import os
+import re
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 app = FastAPI()
 
-# 配置 CORS（同域调用通常不需要，但作为良好实践保留）
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -13,10 +16,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 定义 POST 接口，路由为 /api/convert-markdown
-@app.post("/convert-markdown")
+# 修改这里：加上 /api 前缀
+@app.post("/api/convert-markdown")  
 async def convert_markdown(payload: dict):
     md_text = payload.get("markdown", "")
-    # 将 Markdown 转换为 HTML
-    html_content = markdown.markdown(md_text, extensions=['fenced_code', 'tables'])
+    
+    # 使用纯正则进行基础 Markdown 转换
+    html_content = md_text
+    html_content = re.sub(r'^### (.*)$', r'<h3>\1</h3>', html_content, flags=re.MULTILINE)
+    html_content = re.sub(r'^## (.*)$', r'<h2>\1</h2>', html_content, flags=re.MULTILINE)
+    html_content = re.sub(r'^# (.*)$', r'<h1>\1</h1>', html_content, flags=re.MULTILINE)
+    html_content = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', html_content)
+    html_content = re.sub(r'\*(.*?)\*', r'<em>\1</em>', html_content)
+    html_content = html_content.replace('\n', '<br>')
+    
     return {"html": html_content}
