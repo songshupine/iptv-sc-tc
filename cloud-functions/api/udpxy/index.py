@@ -51,7 +51,7 @@ async def proxy_m3u8(
         return Response(content=f"Unknown file type: {file}", status_code=404)
 
     # 2. 读取 m3u8 文件
-    file_path = os.path.join("/public/home", file_name)
+    file_path = os.path.join("../home", file_name)
     try:
         if not os.path.exists(file_path):
             return Response(content=f"File not found: {file_name}", status_code=404)
