@@ -1,18 +1,18 @@
-import type { NextConfig } from "next";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-const nextConfig: NextConfig = {
-  // 强制关闭尾部斜杠，防止 308 重定向
-  trailingSlash: false, 
-  async rewrites() {
-    return [
-      {
-        // 匹配 /udpxy/ 后面的所有内容（包括 IP:Port）
-        source: "/udpxy/:path*",
-        // 【关键】直接透传 :path*，Next.js 不会去解析里面的冒号和点
-        destination: "/api/udpxy/:path*", 
-      },
-    ];
-  },
+export function middleware(request: NextRequest) {
+  const url = request.nextUrl.clone();
+  // 如果路径包含 /udpxy/，将后续的冒号替换为 __
+  if (url.pathname.startsWith('/udpxy/')) {
+    const prefix = '/udpxy/';
+    const rest = url.pathname.slice(prefix.length);
+    // 将 IP 中的 : 替换为 __
+    url.pathname = prefix + rest.replace(/:/g, '__');
+  }
+  return NextResponse.rewrite(url);
+}
+
+export const config = {
+  matcher: '/udpxy/:path*',
 };
-
-export default nextConfig;
