@@ -7,7 +7,7 @@ import markdown  # 引入 markdown 模块
 # 确保当前目录在搜索路径中（兼容 EdgeOne 环境）
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-def convertmarkdown(request, response):
+def main_handler(event, context):
     try:
         # 1. 获取请求方法
         if request.method != 'POST':
