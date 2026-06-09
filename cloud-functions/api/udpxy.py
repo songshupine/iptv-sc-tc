@@ -1,8 +1,6 @@
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import Response
-from functools import lru_cache
 import httpx
-import time
 
 app = FastAPI()
 
@@ -10,41 +8,28 @@ app = FastAPI()
 # ✅ 三个 JS 的替换逻辑统一配置
 # ===============================
 FILE_CONFIG = {
-    "ct": {"m3u8": "ct.m3u8", "time_sep": "-", "catchup_proto": "rtsp"},
-    "cmcc": {"m3u8": "cmcc.m3u8", "time_sep": "/", "catchup_proto": "http"},
-    "cu": {"m3u8": "cu.m3u8", "time_sep": "-", "catchup_proto": "rtsp"},
+    "ct": {
+        "m3u8": "ct.m3u8",
+        "time_pattern": "{utc:YmdHMS}-{utcend:YmdHMS}",
+        "time_replace": "${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",
+        "catchup_proto": "rtsp",
+    },
+    "cmcc": {
+        "m3u8": "cmcc.m3u8",
+        "time_pattern": "{utc:YmdHMS}/{utcend:YmdHMS}",
+        "time_replace": "${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}",
+        "catchup_proto": "http",
+    },
+    "cu": {
+        "m3u8": "cu.m3u8",
+        "time_pattern": "{utc:YmdHMS}-{utcend:YmdHMS}",
+        "time_replace": "${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",
+        "catchup_proto": "rtsp",
+    },
 }
 
 DEFAULT_IP = "192.168.100.1:4022"
 BASE_URL = "https://tv.gotonas.com"
-CACHE_TTL = 10  # 缓存 10 秒
-
-# ===============================
-# ✅ 带 TTL 的内存缓存装饰器
-# ===============================
-def ttl_cache(maxsize=128, ttl=CACHE_TTL):
-    def decorator(func):
-        cache = {}
-        def wrapper(*args, **kwargs):
-            key = (args, frozenset(kwargs.items()))
-            now = time.time()
-            if key in cache:
-                value, timestamp = cache[key]
-                if now - timestamp < ttl:
-                    return value
-            result = func(*args, **kwargs)
-            cache[key] = (result, now)
-            return result
-        return wrapper
-    return decorator
-
-@ttl_cache(ttl=CACHE_TTL)
-async def fetch_m3u8_content(file_cfg: dict):
-    """带缓存的 m3u8 拉取函数"""
-    async with httpx.AsyncClient(timeout=5, follow_redirects=True) as client:
-        resp = await client.get(f"{BASE_URL}/home/{file_cfg['m3u8']}")
-        resp.raise_for_status()
-        return resp.text
 
 @app.get("/")
 async def udpxy_proxy(
@@ -61,26 +46,25 @@ async def udpxy_proxy(
 
     cfg = FILE_CONFIG[file]
 
-    try:
-        # 1️⃣ 从缓存或源站获取 m3u8
-        m3u_text = await fetch_m3u8_content(cfg)
-    except Exception as e:
-        return Response(f"m3u8 拉取失败: {e}", status_code=502)
+    # 1️⃣ 拉取对应 m3u8
+    m3u8_url = f"{BASE_URL}/home/{cfg['m3u8']}"
+    async with httpx.AsyncClient(timeout=10, follow_redirects=True) as client:
+        resp = await client.get(m3u8_url)
+        if resp.status_code != 200:
+            return Response(
+                f"m3u8 文件不存在: {m3u8_url}",
+                status_code=404,
+            )
+        m3u_text = resp.text
 
     # 2️⃣ IP 替换
     m3u_text = m3u_text.replace(DEFAULT_IP, ip)
 
-    # 3️⃣ APTV 时间占位符
+    # 3️⃣ APTV 时间占位符（按 file 自动切换）
     if aptv:
         m3u_text = m3u_text.replace(
-            "{utc:YmdHMS}",
-            "${(b)yyyyMMddHHmmss}",
-        ).replace(
-            "{utcend:YmdHMS}",
-            "${(e)yyyyMMddHHmmss}",
-        ).replace(
-            "-" if cfg["time_sep"] == "-" else "/",
-            cfg["time_sep"],
+            cfg["time_pattern"],
+            cfg["time_replace"],
         )
 
     # 4️⃣ FCC 追加
@@ -92,11 +76,12 @@ async def udpxy_proxy(
                 lines[i] += f"{sep}fcc={fcc}"
         m3u_text = "\n".join(lines)
 
-    # 5️⃣ Catchup Proxy
+    # 5️⃣ catchup-source 代理（整合 3 个 JS）
     proxy = httpProxy if httpProxy else rtspProxy
     if proxy:
         if not proxy.startswith("http"):
             proxy = f"http://{proxy}"
+
         proto = cfg["catchup_proto"]
         lines = m3u_text.splitlines()
         for i, line in enumerate(lines):
@@ -110,5 +95,8 @@ async def udpxy_proxy(
     return Response(
         content=m3u_text,
         media_type="application/vnd.apple.mpegurl",
-        headers={"Cache-Control": "no-cache", "Access-Control-Allow-Origin": "*"},
+        headers={
+            "Cache-Control": "no-cache",
+            "Access-Control-Allow-Origin": "*",
+        },
     )
