@@ -12,7 +12,7 @@ FILE_MAP = {
 }
 
 DEFAULT_IP = "192.168.100.1:4022"
-base_url = "https://iptv.gotonas.com"
+base_url = "https://tv.gotonas.com"
 
 def get_base_url(request: Request) -> str:
     scheme = request.headers.get("x-forwarded-proto", "https")
