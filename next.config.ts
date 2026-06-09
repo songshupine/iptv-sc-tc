@@ -1,21 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  trailingSlash: false, 
-  async redirects() {
-    return [
-      {
-        // 1. 匹配源路径（仅匹配 /udpxy）
-        source: "/udpxy",
+  //async redirects() {
+  //  return [
+  //    {
+        // ✅ 使用通配符 :path* 捕获 udpxy 后的所有内容（包括参数）
+  //      source: "/udpxy/:path*",
         
-        // 2. 重定向目标路径
-        destination: "/api/udpxy",
+        // ✅ 将捕获的内容原样传递到 api 路径下
+  //      destination: "/api/udpxy/:path*",
         
-        // 3. 使用 301 永久重定向（对客户端和播放器缓存更友好）
-        permanent: true,
-      },
-    ];
-  },
+        // ✅ 301 永久重定向，对 IPTV 播放器缓存更友好
+  //      permanent: true,
+  //    },
+  //  ];
+  //},
 };
 
 export default nextConfig;
