@@ -38,6 +38,7 @@ DEFAULT_IP = "192.168.100.1:4022"
 async def udpxy_proxy(
     request: Request,
     file: str = Query(...),
+    txt: str = Query(None),
     ip: str = Query(DEFAULT_IP),
     aptv: str = Query(None),
     fcc: str = Query(None),
@@ -104,9 +105,14 @@ async def udpxy_proxy(
                 )
         m3u_text = "\n".join(lines)
 
+    if txt:
+        media_type_para = "text/plain; charset=utf-8"
+    else:
+        media_type_para = "application/vnd.apple.mpegurl"
+    
     return Response(
         content=m3u_text,
-        media_type="application/vnd.apple.mpegurl",
+        media_type=media_type_para,
         headers={
             "Cache-Control": "no-cache",
             "Access-Control-Allow-Origin": "*",
