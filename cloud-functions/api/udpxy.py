@@ -23,9 +23,7 @@ def get_base_url(request: Request) -> str:
     )
     return f"{scheme}://{host}"
 
-
-@app.get("/", include_in_schema=False)
-@app.get("", include_in_schema=False)
+@app.get("/")
 async def udpxy_proxy(
     request: Request,
     file: str = Query(...),
