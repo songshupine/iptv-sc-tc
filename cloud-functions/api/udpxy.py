@@ -50,10 +50,9 @@ async def fetch_m3u8_content(file_cfg: dict):
         resp.raise_for_status()
         return resp.text
 
-@app.get("/{full_path:path}")
+@app.get("/")
 async def udpxy_proxy(
     request: Request,
-    full_path: str,
     file: str = Query(...),
     ip: str = Query(DEFAULT_IP),
     aptv: str = Query(None),
