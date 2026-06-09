@@ -9,19 +9,19 @@ app = FastAPI()
 # -----------------------------
 FILE_CONFIG = {
     "ct": {
-        "m3u8": "udpxy_iptv.m3u8",
+        "m3u8": "ct.m3u8",
         "time_pattern": "{utc:YmdHMS}-{utcend:YmdHMS}",
         "time_replace": "${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",
         "catchup_proto": "rtsp",
     },
     "cmcc": {
-        "m3u8": "udpxy_cmcc_iptv.m3u8",
+        "m3u8": "cmcc.m3u8",
         "time_pattern": "{utc:YmdHMS}/{utcend:YmdHMS}",
         "time_replace": "${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}",
         "catchup_proto": "http",
     },
     "cu": {
-        "m3u8": "udpxy_cun_iptv.m3u8",
+        "m3u8": "cu.m3u8",
         "time_pattern": "{utc:YmdHMS}-{utcend:YmdHMS}",
         "time_replace": "${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}",
         "catchup_proto": "rtsp",
