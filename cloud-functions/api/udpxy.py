@@ -12,7 +12,7 @@ FILE_MAP = {
 }
 
 DEFAULT_IP = "192.168.100.1:4022"
-
+base_url = "https://iptv.gotonas.com"
 
 def get_base_url(request: Request) -> str:
     scheme = request.headers.get("x-forwarded-proto", "https")
@@ -36,7 +36,8 @@ async def udpxy_proxy(
         return Response("file 必须为 ct / cmcc / cu", status_code=400)
 
     # ✅ 用用户访问的真实域名拼静态资源
-    base_url = get_base_url(request)
+    #base_url = get_base_url(request)
+    
     m3u8_url = f"{base_url}/home/{FILE_MAP[file]}"
 
     async with httpx.AsyncClient(timeout=10, follow_redirects=True) as client:
