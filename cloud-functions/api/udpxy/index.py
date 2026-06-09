@@ -51,11 +51,11 @@ async def proxy_m3u8(
         return Response(content=f"Unknown file type: {file}", status_code=404)
 
     # 2. 读取 m3u8 文件
-    base = os.path.dirname(__file__)
+    base = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(base, "public", "home", file_name)
     try:
         if not os.path.exists(file_path):
-            return Response(content=f"File not found: {file_name}", status_code=404)
+            return Response(content=f"File not found: {file_path}", status_code=404)
         with open(file_path, "r", encoding="utf-8") as f:
             m3u_text = f.read()
     except Exception as e:
