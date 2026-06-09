@@ -17,7 +17,7 @@ def get_base_url(request: Request) -> str:
     host = request.headers.get("x-forwarded-host") or request.headers.get("host")
     return f"{scheme}://{host}"
 
-@app.get("/udpxy/")
+@app.get("/")
 async def udpxy_proxy(
     request: Request,
     file: str = Query(...),
