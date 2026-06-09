@@ -5,7 +5,7 @@ import httpx
 app = FastAPI()
 
 FILE_MAP = {
-    "ct": "udpxy_iptv.m3u8",
+    "ct": "ct.m3u8",
     "cmcc": "cmcc.m3u8",
     "cu": "cu.m3u8",
 }
