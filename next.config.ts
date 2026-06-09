@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: "/udpxy/:path*",       // ✅ 必须包含斜杠
-        destination: "/api/udpxy/:path*",
+        source: "/udpxy",       // ✅ 必须包含斜杠
+        destination: "/api/udpxy",
       },
     ];
   },
