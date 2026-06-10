@@ -4,7 +4,7 @@ export interface ReadmeResponse {
 }
 
 export async function getReadmeHtml(): Promise<ReadmeResponse> {
-  const res = await fetch("/api/readme", {
+  const res = await fetch("https://tv.gotonas.com/api/readme", {
     method: "GET",
   });
 
