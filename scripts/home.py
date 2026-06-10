@@ -190,7 +190,11 @@ def append_telecom_add_to_m3u8(udpxy_m3u8_file):
     
     :param udpxy_m3u8_file: generateUdpxyM3U8 生成的目标文件路径（如 'telecom.m3u8'）
     """
+<<<<<<< HEAD
     add_file = "./home/telecom_add.m3u8"
+=======
+    add_file = "./public/home/telecom_add.m3u8"
+>>>>>>> 18f7003 (Add files via upload)
     
     try:
         with open(add_file, "r", encoding="utf-8") as f_add:
@@ -213,7 +217,11 @@ def append_telecom_add_to_m3u8(udpxy_m3u8_file):
         print(f"⚠️ 追加过程中出错: {e}")
 
 def generateHome():
+<<<<<<< HEAD
     m3u8_file = './home/iptv.m3u8'
+=======
+    m3u8_file = './public/home/iptv.m3u8'
+>>>>>>> 18f7003 (Add files via upload)
     # epg_m3u8_file = './home/iptv_epg.m3u8'
     generateM3U8(m3u8_file)
     print("生成m3u8完成")
@@ -221,11 +229,19 @@ def generateHome():
     with open(m3u8_file, "r", encoding="utf-8") as f:
         content = f.read()
     content = content.replace("{utc:YmdHMS}-{utcend:YmdHMS}", "${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}")
+<<<<<<< HEAD
     with open("./home/apt_iptv.m3u8", "w", encoding="utf-8") as f:
         f.write(content)
     print("生成APTV m3u8完成")
 
     udpxy_m3u8_file = './home/udpxy_iptv.m3u8'
+=======
+    with open("./public/home/apt_iptv.m3u8", "w", encoding="utf-8") as f:
+        f.write(content)
+    print("生成APTV m3u8完成")
+
+    udpxy_m3u8_file = './public/home/ct.m3u8'
+>>>>>>> 18f7003 (Add files via upload)
     generateUdpxyM3U8(udpxy_m3u8_file)
     append_telecom_add_to_m3u8(udpxy_m3u8_file)
     print("生成udpxy_m3u8完成")
@@ -266,8 +282,13 @@ if data.get("success"):
 
         group = filterCategory(name)
         icon = ''
+<<<<<<< HEAD
         if os.path.exists(f'./logo/{name}.png'):
             icon = f'https://iptv.gotonas.com/logo/{name}.png'
+=======
+        if os.path.exists(f'./public/logo/{name}.png'):
+            icon = f'https://tv.gotonas.com/logo/{name}.png'
+>>>>>>> 18f7003 (Add files via upload)
 
         # 判断name是否在iptvList中
         if not checkChannelExist(iptvList, name):
