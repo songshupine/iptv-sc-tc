@@ -1,0 +1,26 @@
+name: Upload m3u8 from public/home
+
+on:
+  push:
+    paths:
+      - "public/home/**"
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - run: bun install
+
+      - name: Upload to Pages Blob
+        run: bun scripts/upload-blob.js
+        env:
+          PAGES_PROJECT_ID: ${{ secrets.PAGES_PROJECT_ID }}
+          PAGES_API_TOKEN: ${{ secrets.PAGES_API_TOKEN }}
+
