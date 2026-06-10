@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "public/home/**"
+      
+  workflow_dispatch: 
 
 jobs:
   upload:
