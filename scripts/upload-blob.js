@@ -12,7 +12,7 @@ const store = getStore({
 const files = ["ct.m3u8", "cmcc.m3u8", "cu.m3u8"];
 
 // ✅ README.md 在 GitHub 项目根目录
-const readmePath = join(process.cwd(), "README.md");
+const readmePath = join(process.cwd(), "readme.md");
 
 // 1️⃣ 上传 m3u8
 for (const file of files) {
