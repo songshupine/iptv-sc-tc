@@ -7,6 +7,11 @@ on:
       
   workflow_dispatch: 
 
+  workflow_run:
+    workflows: ["Auto Update IPTV List"] # 对应 update-iptv.yml 中的 name
+    types:
+      - completed
+
 jobs:
   upload:
     runs-on: ubuntu-latest
