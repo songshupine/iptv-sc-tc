@@ -1,4 +1,4 @@
-# 🎬 成都/四川 电信 移动 联通 IPTV 直播源
+# 🎬 四川 电信 移动 联通 IPTV 直播源
 
 ![badge](https://github.com/songshupine/iptv-cd-telecom/actions/workflows/cloudflare-pages.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -11,7 +11,7 @@
 ## ✨ 核心特性
 
 - 🎬 **广泛兼容**：支持 tvbox、KODI、fileball、APTV、mytv-android 等主流播放器
-- 🔄 **回看时移**：支持节目回看和时移功能，不错过精彩内容（仅电信）
+- 🔄 **回看时移**：支持节目回看和时移功能，不错过精彩内容（仅电信和部分移动）
 - 📡 **灵活接入**：提供官方单播源、组播转单播（udpxy/msd_lite/rtp2httpd）多种方式
 - 🎯 **4K 超清**：已解决部分 4K 频道播放问题，享受超高清画质
 - 📺 **完整节目单**：每天多次更新 EPG，覆盖央视、卫视超 100 套频道
@@ -26,17 +26,17 @@
 
 **电信组播标准版：**
 ```
-https://iptv.gotonas.com/home/iptv.m3u8
+https://tv.gotonas.com/home/iptv.m3u8
 ```
 
 **电信组播APTV 兼容版：**
 ```
-https://iptv.gotonas.com/home/apt_iptv.m3u8
+https://tv.gotonas.com/home/apt_iptv.m3u8
 ```
 
 **联通单播版：**
 ```
-https://iptv.gotonas.com/home/cun_iptv.m3u8
+https://tv.gotonas.com/home/cun_iptv.m3u8
 ```
 
 > 💡 **提示**：两个版本电信都支持时移功能，APTV 版针对时区兼容性进行了优化
@@ -50,35 +50,24 @@ https://iptv.gotonas.com/home/cun_iptv.m3u8
 #### 📌 电信地址格式
 
 ```
-https://iptv.gotonas.com/udpxy/[ip:port]?[参数]
+https://tv.gotonas.com/api/udp?file=ct&[ip:port]&[其他参数]
 ```
 
 #### 📌 移动地址格式
 
 ```
-https://iptv.gotonas.com/udpxy_cmcc/[ip:port]?[参数]
+https://tv.gotonas.com/api/udp?file=cmcc&[ip:port]&[其他参数]
 ```
 #### 📌 联通地址格式
 
 ```
-https://iptv.gotonas.com/udpxy_cun/[ip:port]?[参数]
+https://tv.gotonas.com/api/udp?file=cu&[ip:port]&[其他参数]
 ```
 
 #### 🎯 使用示例
 
-**示例 1 - 基础用法（举例为电信，移动、联通请自行用udpxy_cmcc或者udpxy_cun替换udpxy，后面的举例类似）：**
 ```
-https://iptv.gotonas.com/udpxy/192.168.100.2:4022
-```
-
-**示例 2 - APTV + FCC + RTSP 代理：**
-```
-https://iptv.gotonas.com/udpxy/192.168.100.2:4022?aptv=1&fcc=182.139.234.40:8027&rtspProxy=192.168.100.2:4022
-```
-
-**示例 3 - 回放转单播（RTSP → HTTP）：**
-```
-https://iptv.gotonas.com/udpxy/192.168.100.2:4022?fcc=182.139.234.40:8027&rtspProxy=192.168.100.2:4022
+https://tv.gotonas.com/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&httpProxy=192.168.2.30:8888
 ```
 
 #### 📋 参数说明
@@ -104,23 +93,10 @@ https://iptv.gotonas.com/udpxy/192.168.100.2:4022?fcc=182.139.234.40:8027&rtspPr
 每天自动更新多次，覆盖 **央视、卫视超 100 套频道**：
 
 ```
-https://epg.zsdc.eu.org/t.xml.gz
+https://epg.gotonas.com/t.xml.gz
 ```
 
 > 🔄 **更新频率**：每天多次自动更新，确保节目单准确性
-
----
-
-## 🔧 相关资源
-
-### 📡 华硕路由器单线复用 / IPTV 融合
-
-如果你使用华硕路由器，可参考以下项目实现单线复用和 IPTV 融合：
-
-- 🔗 **项目地址**：[asus-router-shell](https://github.com/suzukua/asus-router-shell)
-- ⚙️ **IPTV 配置脚本**：[查看配置](https://github.com/suzukua/asus-router-shell/blob/main/scripts/iptv.script#L31-L32)
-
-> ⚠️ **注意**：双网融合后无法观看回放？请参考上述配置脚本进行调整
 
 ---
 
@@ -128,7 +104,7 @@ https://epg.zsdc.eu.org/t.xml.gz
 
 遇到问题或有建议？欢迎通过以下方式反馈：
 
-- 📮 **提交 Issue**：[GitHub Issues](https://github.com/songshupine/iptv-cd-telecom/issues)
+- 📮 **提交 Issue**：[GitHub Issues](https://github.com/songshupine/iptv-sc-tv/issues)
 - 💡 **功能建议**：欢迎在 Issues 中提出你的想法
 
 > 🙏 **提示**：提交问题时请详细描述你的使用场景和遇到的错误信息
