@@ -1,12 +1,13 @@
 # 🎬 四川 电信 移动 联通 IPTV 直播源
 
-![badge](https://github.com/songshupine/iptv-cd-telecom/actions/workflows/cloudflare-pages.yml/badge.svg)
+![badge](https://github.com/songshupine/iptv-sc-tc/actions/workflows/cloudflare-pages.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > 📺 **IPTV 机顶盒替代方案** | 支持回看、时移 | 每周不定时更新  
 > 📅 **更新时间**：2026-06-11 13:16:12 | 共 **150** 条频道信息
 ---
 > 此项目基于iptv.zsdc.eu.org (https://github.com/suzukua/iptv-cd-telecom) 项目开发
+> 部署在腾讯edgeone pages上面，国内访问更快更稳定
 ---
 ## ✨ 核心特性
 
@@ -74,8 +75,8 @@ https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.1
 
 | 参数 | 功能描述 | 使用示例 | 适用场景                   |
 |------|------------|------------|------------------------|
-| `file=` | 使用的运营商文件 | `aptv=ct` | ct cu cmcc 分别对应电信/联通/移动|
-| `ip=ip:port` | udpxy代理地址和端口 | `192.168.1.1:8888` | udpxy代理服务器地址 |
+| `file=ct` | 使用的运营商文件 | `file=ct` | ct cu cmcc 分别对应电信/联通/移动|
+| `ip=host:port` | udpxy代理地址和端口 | `192.168.1.1:8888` | udpxy代理服务器地址 |
 | `aptv=1` | 启用 APTV +8时区兼容 | `aptv=1` | APTV、mytv-android 等播放器 |
 | `fcc=host:port` | 启用 FCC 快速换台模式 | `fcc=182.139.234.40:8027` | 需要快速切换频道的场景            |
 | `rtspProxy=host:port` | RTSP 转 HTTP 播放 | `rtspProxy=192.168.100.2:4022` | 不支持 RTSP 协议的播放器/外网回看   |
@@ -93,7 +94,7 @@ https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.1
 
 ## 📺 EPG 电子节目单
 
-每天自动更新多次，覆盖 **央视、卫视超 100 套频道**：
+每天自动同步原项目多次到国内服务器，覆盖 **央视、卫视超 100 套频道**：
 
 ```
 https://epg.gotonas.com/t.xml.gz
