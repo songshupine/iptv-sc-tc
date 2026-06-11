@@ -97,7 +97,7 @@ https://epg.gotonas.com/t.xml.gz
 
 遇到问题或有建议？欢迎通过以下方式反馈：
 
-- 📮 **提交 Issue**：[GitHub Issues](https://github.com/songshupine/iptv-sc-tv/issues)
+- 📮 **提交 Issue**：[GitHub Issues](https://github.com/songshupine/iptv-sc-tc/issues)
 - 💡 **功能建议**：欢迎在 Issues 中提出你的想法
 
 > 🙏 **提示**：提交问题时请详细描述你的使用场景和遇到的错误信息
