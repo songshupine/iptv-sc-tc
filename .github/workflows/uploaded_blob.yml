@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "public/home/**"
+      - "readme.md" 
       
   workflow_dispatch: 
 
