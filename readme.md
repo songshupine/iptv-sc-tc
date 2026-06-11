@@ -1,13 +1,13 @@
 # 🎬 四川 电信 移动 联通 IPTV 直播源
 
-![badge](https://github.com/songshupine/iptv-sc-tc/actions/workflows/cloudflare-pages.yml/badge.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > 📺 **IPTV 机顶盒替代方案** | 支持回看、时移 | 每周不定时更新  
 > 📅 **更新时间**：2026-06-11 13:16:12 | 共 **150** 条频道信息
 ---
-> 此项目基于iptv.zsdc.eu.org (https://github.com/suzukua/iptv-cd-telecom) 项目开发
-> 部署在腾讯edgeone pages上面，国内访问更快更稳定
+> 此项目基于(https://github.com/suzukua/iptv-cd-telecom) 开发
+---
+> 部署在腾讯edgeone pages上，国内访问更快更稳定
 ---
 ## ✨ 核心特性
 
@@ -48,27 +48,16 @@ https://tv.gotonas.com/home/cun_iptv.m3u8
 
 适用于已搭建 udpxy、msd_lite、rtp2httpd 等工具的用户。
 
-#### 📌 电信地址格式
+#### 📌 格式说明
 
 ```
-https://tv.gotonas.com/api/udp?file=ct&[ip:port]&[其他参数]
-```
-
-#### 📌 移动地址格式
-
-```
-https://tv.gotonas.com/api/udp?file=cmcc&[ip:port]&[其他参数]
-```
-#### 📌 联通地址格式
-
-```
-https://tv.gotonas.com/api/udp?file=cu&[ip:port]&[其他参数]
+https://tv.gotonas.com/api/udp?file=ct&[host:port]&[其他参数]
 ```
 
 #### 🎯 使用示例
 
 ```
-https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&httpProxy=192.168.2.30:8888
+https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&rtspProxy=192.168.2.30:8888
 ```
 
 #### 📋 参数说明
