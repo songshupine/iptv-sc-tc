@@ -1,49 +1,60 @@
+// functions/api/readme.js
 import { getStore } from "@edgeone/pages-blob";
 import MarkdownIt from "markdown-it";
 
-// 初始化 markdown 解析器
 const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true,
 });
 
+// 缓存配置
+const CACHE_TTL = 60 * 1000; // 1 分钟
+let memoryCache = null;
+let cacheTime = 0;
+
 export async function onRequest(context) {
   try {
-    // 从 Blob 存储读取 readme.md
-    const store = getStore("iptv-m3u8");
-    const mdContent = await store.get("home/readme.md");
+    // 1. 内存缓存检查
+    //if (memoryCache && Date.now() - cacheTime < CACHE_TTL) {
+    //  return new Response(
+    //    JSON.stringify({ html: memoryCache, source: "memory-cache" }),
+    //    { headers: { "Content-Type": "application/json" } }
+    //  );
+    //}
+
+    // 2. ✅ 从 Blob 的 home 目录读取 readme.md
+    const store = getStore("iptv-m3u8"); // 替换为你的 Blob Store 名称
+    const mdContent = await store.get("home/readme.md"); // ← 修改点
 
     if (!mdContent) {
       return new Response(
-        JSON.stringify({ error: "readme.md not found" }),
-        {
-          status: 404,
-          headers: { "Content-Type": "application/json" },
-        }
+        JSON.stringify({ error: "readme.md not found in Blob home directory" }),
+        { status: 404 }
       );
     }
 
-    // 每次都重新渲染，不使用任何缓存
+    // 3. Markdown 转 HTML
     const html = md.render(mdContent);
+
+    // 4. 更新缓存
+    memoryCache = html;
+    cacheTime = Date.now();
 
     return new Response(
       JSON.stringify({ html, source: "blob-storage" }),
       {
         headers: {
           "Content-Type": "application/json",
-          // 禁止 CDN / 浏览器缓存
-          "Cache-Control": "no-cache, no-store, must-revalidate",
+          "Cache-Control": "public, max-age=60",
         },
       }
     );
+
   } catch (error) {
     return new Response(
       JSON.stringify({ error: error.message }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }
+      { status: 500 }
     );
   }
 }
