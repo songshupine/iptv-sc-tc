@@ -57,7 +57,7 @@ https://tv.gotonas.com/api/udp?file=ct&[host:port]&[其他参数]
 #### 🎯 使用示例
 
 ```
-https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&rtspProxy=192.168.2.30:8888
+https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&rtspProxy=http://192.168.2.30:8888
 ```
 
 #### 📋 参数说明
@@ -70,8 +70,8 @@ https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.1
 | `fcc=host:port` | 启用 FCC 快速换台模式 | `fcc=182.139.234.40:8027` | 需要快速切换频道的场景            |
 | `rtspProxy=host:port` | RTSP 转 HTTP 播放 | `rtspProxy=192.168.100.2:4022` | 不支持 RTSP 协议的播放器/外网回看   |
 | `r2h-token=token` | r2h-token参数 | `r2h-token=mytoken` | 有r2h-token时使用   |
-| `httpProxy=host:port` | http 代理播放 | `httpProxy=192.168.100.2:4022` | 外网回看   |
-| `txt=1` | 浏览器或者播放器需要txt头返回 | `txt=1` | 可以让浏览器直接看转换后文本   |
+| `httpProxy=host:port` | http 代理播放 | `httpProxy=http://192.168.100.2:4022` | 外网回看,一定要加http或者https   |
+| `txt=1` | 控制txt头返回，默认txt | `txt=0` | 可以让播放器接收到非txt头   |
 
 > 📝 **说明**：
 > - 回看时间参数格式：`playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}`
