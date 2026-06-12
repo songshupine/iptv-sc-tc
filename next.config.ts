@@ -1,11 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async rewrites() {
+  async headers() {
     return [
       {
-        source: "/udpxy",       // ✅ 必须包含斜杠
-        destination: "/api/udpxy",
+        // 匹配 /home/ 目录下所有的 .m3u8 文件
+        source: "/home/:path*.m3u8", 
+        headers: [
+          {
+            key: "Content-Type",
+            value: "text/plain; charset=utf-8",
+          },
+        ],
       },
     ];
   },
