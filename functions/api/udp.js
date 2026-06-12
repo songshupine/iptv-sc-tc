@@ -37,7 +37,7 @@ export async function onRequest(context) {
 
   // 1. 解析 Query 参数
   const file = url.searchParams.get("file");
-  const txt = url.searchParams.get("txt");
+  const txt = url.searchParams.get("txt") || "1";
   const ip = url.searchParams.get("ip") || DEFAULT_IP;
   const aptv = url.searchParams.get("aptv");
   const fcc = url.searchParams.get("fcc");
