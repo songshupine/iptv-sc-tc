@@ -64,14 +64,13 @@ export async function onRequest(context) {
     let processedText = m3uText;
 
     // 3. IP 替换
-    processedText = processedText.replace(DEFAULT_IP, ip);
+    const ipRegex = new RegExp(DEFAULT_IP, 'g');
+    processedText = processedText.replace(ipRegex, newIpAddress);
 
     // 4. APTV 时间占位符
     if (aptv) {
-      processedText = processedText.replace(
-        cfg.time_pattern,
-        cfg.time_replace
-      );
+      const regex = new RegExp(cfg.time_pattern, 'g'); 
+      processedText = processedText.replace(regex, cfg.time_replace);
     }
 
     // 5. FCC 追加
