@@ -118,8 +118,8 @@ export async function onRequest(context) {
     return new Response(processedText, {
       headers: {
         "Content-Type": txt === "0"
-          ? "text/plain; charset=utf-8"
-          : "application/vnd.apple.mpegurl",
+          ? "application/vnd.apple.mpegurl"
+          : "text/plain; charset=utf-8",
         "Cache-Control": "no-cache",
         "Access-Control-Allow-Origin": "*",
       },
