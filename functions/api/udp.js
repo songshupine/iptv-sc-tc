@@ -117,7 +117,7 @@ export async function onRequest(context) {
     // 8. 返回响应
     return new Response(processedText, {
       headers: {
-        "Content-Type": txt
+        "Content-Type": txt === "0"
           ? "text/plain; charset=utf-8"
           : "application/vnd.apple.mpegurl",
         "Cache-Control": "no-cache",
