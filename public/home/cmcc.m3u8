@@ -1,90 +1,90 @@
 #EXTM3U name="成都移动IPTV - 2026-03-06 12:08:25" x-tvg-url="https://epg.gotonas.com/t.xml.gz"
 #KODIPROP:inputstream=inputstream.ffmpegdirect
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV1.png" tvg-id="CCTV1" tvg-name="CCTV1" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-1/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV1
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV1.png" tvg-id="CCTV1" tvg-name="CCTV1" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-1/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV1
 http://192.168.100.1:4022/udp/239.10.0.151:5140
-#EXTINF:-1 tvg-name="CCTV1" tvg-logo="https://iptv.gotonas.com/logo/CCTV1.png" group-title="CCTV",CCTV1
+#EXTINF:-1 tvg-name="CCTV1" tvg-logo="https://tv.gotonas.com/logo/CCTV1.png" group-title="CCTV",CCTV1
 http://192.168.100.1:4022/udp/239.11.0.65:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV2.png" tvg-id="CCTV2" tvg-name="CCTV2" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-2/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV2
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV2.png" tvg-id="CCTV2" tvg-name="CCTV2" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-2/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV2
 http://192.168.100.1:4022/udp/239.11.0.108:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV3.png" tvg-id="CCTV3" tvg-name="CCTV3" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-3/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV3
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV3.png" tvg-id="CCTV3" tvg-name="CCTV3" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-3/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV3
 http://192.168.100.1:4022/udp/239.11.0.101:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV4.png" tvg-id="CCTV4" tvg-name="CCTV4" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-4/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV4
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV4.png" tvg-id="CCTV4" tvg-name="CCTV4" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-4/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV4
 http://192.168.100.1:4022/udp/239.11.0.109:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV5.png" tvg-id="CCTV5" tvg-name="CCTV5" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-5/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV5
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV5.png" tvg-id="CCTV5" tvg-name="CCTV5" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-5/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV5
 http://192.168.100.1:4022/udp/239.11.0.100:5140
-#EXTINF:-1 tvg-name="CCTV5+" tvg-logo="https://iptv.gotonas.com/logo/CCTV5.png" group-title="CCTV",CCTV5+
+#EXTINF:-1 tvg-name="CCTV5+" tvg-logo="https://tv.gotonas.com/logo/CCTV5.png" group-title="CCTV",CCTV5+
 http://192.168.100.1:4022/udp/239.11.0.241:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV6.png" tvg-id="CCTV6" tvg-name="CCTV6" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-6/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV6
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV6.png" tvg-id="CCTV6" tvg-name="CCTV6" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-6/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV6
 http://192.168.100.1:4022/udp/239.11.0.102:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV7.png" tvg-id="CCTV7" tvg-name="CCTV7" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-7/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV7
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV7.png" tvg-id="CCTV7" tvg-name="CCTV7" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-7/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV7
 http://192.168.100.1:4022/udp/239.11.0.110:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV8.png" tvg-id="CCTV8" tvg-name="CCTV8" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-8/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV8
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV8.png" tvg-id="CCTV8" tvg-name="CCTV8" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-8/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV8
 http://192.168.100.1:4022/udp/239.11.0.103:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV9.png" tvg-id="CCTV9" tvg-name="CCTV9" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-9/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV9
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV9.png" tvg-id="CCTV9" tvg-name="CCTV9" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-9/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV9
 http://192.168.100.1:4022/udp/239.11.0.111:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV10.png" tvg-id="CCTV10" tvg-name="CCTV10" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-10/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV10
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV10.png" tvg-id="CCTV10" tvg-name="CCTV10" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-10/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV10
 http://192.168.100.1:4022/udp/239.11.0.112:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV11.png" tvg-id="CCTV11" tvg-name="CCTV11" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-11/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV11
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV11.png" tvg-id="CCTV11" tvg-name="CCTV11" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-11/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV11
 http://192.168.100.1:4022/udp/239.11.0.22:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV12.png" tvg-id="CCTV12" tvg-name="CCTV12" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-12/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV12
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV12.png" tvg-id="CCTV12" tvg-name="CCTV12" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-12/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV12
 http://192.168.100.1:4022/udp/239.11.0.113:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV13.png" tvg-id="CCTV13" tvg-name="CCTV13" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-13/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV13
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV13.png" tvg-id="CCTV13" tvg-name="CCTV13" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-13/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV13
 http://192.168.100.1:4022/udp/239.11.0.24:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV14.png" tvg-id="CCTV14" tvg-name="CCTV14" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-14/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV14
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV14.png" tvg-id="CCTV14" tvg-name="CCTV14" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-14/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV14
 http://192.168.100.1:4022/udp/239.11.0.114:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV15.png" tvg-id="CCTV15" tvg-name="CCTV15" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-15/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV15
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV15.png" tvg-id="CCTV15" tvg-name="CCTV15" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-15/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV15
 http://192.168.100.1:4022/udp/239.11.0.26:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV16.png" tvg-id="CCTV16" tvg-name="CCTV16" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-16/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV16
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV16.png" tvg-id="CCTV16" tvg-name="CCTV16" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-16/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV16
 http://192.168.100.1:4022/udp/239.11.0.67:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV17.png" tvg-id="CCTV17" tvg-name="CCTV17" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-17/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV17
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV17.png" tvg-id="CCTV17" tvg-name="CCTV17" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-17/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV17
 http://192.168.100.1:4022/udp/239.11.0.107:5140
-#EXTINF:-1 tvg-name="CETV1" tvg-logo="https://iptv.gotonas.com/logo/CETV1.png" group-title="未分组",CETV1
+#EXTINF:-1 tvg-name="CETV1" tvg-logo="https://tv.gotonas.com/logo/CETV1.png" group-title="其他",CETV1
 http://192.168.100.1:4022/udp/239.11.0.139:5140
-#EXTINF:-1 tvg-name="CETV2" tvg-logo="https://iptv.gotonas.com/logo/CETV2.png" group-title="未分组",CETV2
+#EXTINF:-1 tvg-name="CETV2" tvg-logo="https://tv.gotonas.com/logo/CETV2.png" group-title="其他",CETV2
 http://192.168.100.1:4022/udp/239.11.0.246:5140
-#EXTINF:-1 tvg-name="中学生" tvg-logo="" group-title="未分组",中学生
+#EXTINF:-1 tvg-name="中学生" tvg-logo="" group-title="其他",中学生
 http://192.168.100.1:4022/udp/239.11.0.247:5140
-#EXTINF:-1 tvg-name="CETV4" tvg-logo="https://iptv.gotonas.com/logo/CETV4.png" group-title="未分组",CETV4
+#EXTINF:-1 tvg-name="CETV4" tvg-logo="https://tv.gotonas.com/logo/CETV4.png" group-title="其他",CETV4
 http://192.168.100.1:4022/udp/239.11.0.248:5140
-#EXTINF:-1 tvg-name="CGTN西语" tvg-logo="https://iptv.gotonas.com/logo/CGTN.png" group-title="未分组",CGTN西语
+#EXTINF:-1 tvg-name="CGTN西语" tvg-logo="https://tv.gotonas.com/logo/CGTN.png" group-title="其他",CGTN西语
 http://192.168.100.1:4022/udp/239.11.0.79:5140
-#EXTINF:-1 tvg-name="CGTN法语" tvg-logo="https://iptv.gotonas.com/logo/CGTN.png" group-title="未分组",CGTN法语
+#EXTINF:-1 tvg-name="CGTN法语" tvg-logo="https://tv.gotonas.com/logo/CGTN.png" group-title="其他",CGTN法语
 http://192.168.100.1:4022/udp/239.11.0.80:5140
-#EXTINF:-1 tvg-name="CGTN阿语" tvg-logo="https://iptv.gotonas.com/logo/CGTN.png" group-title="未分组",CGTN阿语
+#EXTINF:-1 tvg-name="CGTN阿语" tvg-logo="https://tv.gotonas.com/logo/CGTN.png" group-title="其他",CGTN阿语
 http://192.168.100.1:4022/udp/239.11.0.81:5140
-#EXTINF:-1 tvg-name="CGTN俄语" tvg-logo="https://iptv.gotonas.com/logo/CGTN.png" group-title="未分组",CGTN俄语
+#EXTINF:-1 tvg-name="CGTN俄语" tvg-logo="https://tv.gotonas.com/logo/CGTN.png" group-title="其他",CGTN俄语
 http://192.168.100.1:4022/udp/239.11.0.82:5140
-#EXTINF:-1 tvg-name="CGTN记录" tvg-logo="https://iptv.gotonas.com/logo/CGTN.png" group-title="未分组",CGTN记录
+#EXTINF:-1 tvg-name="CGTN记录" tvg-logo="https://tv.gotonas.com/logo/CGTN.png" group-title="其他",CGTN记录
 http://192.168.100.1:4022/udp/239.11.0.138:5140
-#EXTINF:-1 tvg-name="CGTN英语" tvg-logo="https://iptv.gotonas.com/logo/CGTN.png" group-title="未分组",CGTN英语
+#EXTINF:-1 tvg-name="CGTN英语" tvg-logo="https://tv.gotonas.com/logo/CGTN.png" group-title="其他",CGTN英语
 http://192.168.100.1:4022/udp/239.11.0.245:5140
-#EXTINF:-1 tvg-logo="https://iptv.gotonas.com/logo/CCTV4K.png" tvg-id="CCTV4K" tvg-name="CCTV4K" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/CCTV-4K/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV4K
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV4K.png" tvg-id="CCTV4K" tvg-name="CCTV4K" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/CCTV-4K/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV4K
 http://192.168.100.1:4022/udp/239.11.0.61:5140
-#EXTINF:-1 tvg-name="北京卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",北京卫视4K
+#EXTINF:-1 tvg-name="北京卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",北京卫视4K
 http://192.168.100.1:4022/udp/239.10.0.91:5140
-#EXTINF:-1 tvg-name="北京卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",北京卫视4K
+#EXTINF:-1 tvg-name="北京卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",北京卫视4K
 http://192.168.100.1:4022/udp/239.10.0.92:5140
-#EXTINF:-1 tvg-name="深圳卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",深圳卫视4K
+#EXTINF:-1 tvg-name="深圳卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",深圳卫视4K
 http://192.168.100.1:4022/udp/239.10.0.93:5140
-#EXTINF:-1 tvg-name="广东卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",广东卫视4K
+#EXTINF:-1 tvg-name="广东卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",广东卫视4K
 http://192.168.100.1:4022/udp/239.10.0.94:5140
-#EXTINF:-1 tvg-name="四川卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",四川卫视4K
+#EXTINF:-1 tvg-name="四川卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",四川卫视4K
 http://192.168.100.1:4022/udp/239.11.0.43:5140
-#EXTINF:-1 tvg-name="四川卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",四川卫视4K
+#EXTINF:-1 tvg-name="四川卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",四川卫视4K
 http://192.168.100.1:4022/udp/239.11.0.86:5140
-#EXTINF:-1 tvg-name="东方卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",东方卫视4K
+#EXTINF:-1 tvg-name="东方卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",东方卫视4K
 http://192.168.100.1:4022/udp/239.11.0.90:5140
-#EXTINF:-1 tvg-name="浙江卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",浙江卫视4K
+#EXTINF:-1 tvg-name="浙江卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",浙江卫视4K
 http://192.168.100.1:4022/udp/239.11.0.89:5140
-#EXTINF:-1 tvg-name="江苏卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",江苏卫视4K
+#EXTINF:-1 tvg-name="江苏卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",江苏卫视4K
 http://192.168.100.1:4022/udp/239.11.0.88:5140
-#EXTINF:-1 tvg-name="湖南卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",湖南卫视4K
+#EXTINF:-1 tvg-name="湖南卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",湖南卫视4K
 http://192.168.100.1:4022/udp/239.11.0.87:5140
-#EXTINF:-1 tvg-name="山东卫视4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="卫视",山东卫视4K
+#EXTINF:-1 tvg-name="山东卫视4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="卫视",山东卫视4K
 http://192.168.100.1:4022/udp/239.11.0.91:5140
-#EXTINF:-1 tvg-name="爱上4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="未分组",爱上4K
+#EXTINF:-1 tvg-name="爱上4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="其他",爱上4K
 http://192.168.100.1:4022/udp/239.11.0.120:5140
-#EXTINF:-1 tvg-name="咪咕4K" tvg-logo="https://iptv.gotonas.com/logo/4K.png" group-title="未分组",咪咕4K
+#EXTINF:-1 tvg-name="咪咕4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="其他",咪咕4K
 http://192.168.100.1:4022/udp/239.10.0.240:5140
 #EXTINF:-1 tvg-name="北京卫视" tvg-logo="" group-title="卫视",北京卫视
 http://192.168.100.1:4022/udp/239.11.0.121:5140
@@ -156,57 +156,57 @@ http://192.168.100.1:4022/udp/239.11.0.206:5140
 http://192.168.100.1:4022/udp/239.11.0.193:5140
 #EXTINF:-1 tvg-name="安多卫视" tvg-logo="" group-title="卫视",安多卫视
 http://192.168.100.1:4022/udp/239.11.0.124:5140
-#EXTINF:-1 tvg-name="山东教育" tvg-logo="" group-title="未分组",山东教育
+#EXTINF:-1 tvg-name="山东教育" tvg-logo="" group-title="其他",山东教育
 http://192.168.100.1:4022/udp/239.11.0.140:5140
 #EXTINF:-1 tvg-name="厦门卫视" tvg-logo="" group-title="卫视",厦门卫视
 http://192.168.100.1:4022/udp/239.11.0.83:5140
 #EXTINF:-1 tvg-name="三沙卫视" tvg-logo="" group-title="卫视",三沙卫视
 http://192.168.100.1:4022/udp/239.11.0.84:5140
-#EXTINF:-1 tvg-name="CHC家庭影院" tvg-logo="https://iptv.gotonas.com/logo/CHC.png" group-title="未分组",CHC家庭影院
+#EXTINF:-1 tvg-name="CHC家庭影院" tvg-logo="https://tv.gotonas.com/logo/CHC.png" group-title="其他",CHC家庭影院
 http://192.168.100.1:4022/udp/239.10.0.86:5140
-#EXTINF:-1 tvg-name="CHC动作电影" tvg-logo="https://iptv.gotonas.com/logo/CHC.png" group-title="未分组",CHC动作电影
+#EXTINF:-1 tvg-name="CHC动作电影" tvg-logo="https://tv.gotonas.com/logo/CHC.png" group-title="其他",CHC动作电影
 http://192.168.100.1:4022/udp/239.10.0.87:5140
-#EXTINF:-1 tvg-name="CHC影迷电影" tvg-logo="https://iptv.gotonas.com/logo/CHC.png" group-title="未分组",CHC影迷电影
+#EXTINF:-1 tvg-name="CHC影迷电影" tvg-logo="https://tv.gotonas.com/logo/CHC.png" group-title="其他",CHC影迷电影
 http://192.168.100.1:4022/udp/239.10.0.88:5140
-#EXTINF:-1 tvg-name="哈哈炫动" tvg-logo="" group-title="未分组",哈哈炫动
+#EXTINF:-1 tvg-name="哈哈炫动" tvg-logo="" group-title="其他",哈哈炫动
 http://192.168.100.1:4022/udp/239.11.0.64:5140
-#EXTINF:-1 tvg-name="金鹰卡通" tvg-logo="" group-title="未分组",金鹰卡通
+#EXTINF:-1 tvg-name="金鹰卡通" tvg-logo="" group-title="其他",金鹰卡通
 http://192.168.100.1:4022/udp/239.11.0.127:5140
-#EXTINF:-1 tvg-name="卡酷少儿" tvg-logo="" group-title="未分组",卡酷少儿
+#EXTINF:-1 tvg-name="卡酷少儿" tvg-logo="" group-title="其他",卡酷少儿
 http://192.168.100.1:4022/udp/239.11.0.129:5140
-#EXTINF:-1 tvg-name="嘉佳卡通" tvg-logo="" group-title="未分组",嘉佳卡通
+#EXTINF:-1 tvg-name="嘉佳卡通" tvg-logo="" group-title="其他",嘉佳卡通
 http://192.168.100.1:4022/udp/239.11.0.203:5140
-#EXTINF:-1 tvg-name="优漫卡通" tvg-logo="" group-title="未分组",优漫卡通
+#EXTINF:-1 tvg-name="优漫卡通" tvg-logo="" group-title="其他",优漫卡通
 http://192.168.100.1:4022/udp/239.11.0.63:5140
-#EXTINF:-1 tvg-name="动漫秀场" tvg-logo="" group-title="未分组",动漫秀场
+#EXTINF:-1 tvg-name="动漫秀场" tvg-logo="" group-title="其他",动漫秀场
 http://192.168.100.1:4022/udp/239.10.0.101:5140
-#EXTINF:-1 tvg-name="生活时尚" tvg-logo="" group-title="未分组",生活时尚
+#EXTINF:-1 tvg-name="生活时尚" tvg-logo="" group-title="其他",生活时尚
 http://192.168.100.1:4022/udp/239.10.0.102:5140
-#EXTINF:-1 tvg-name="游戏风云" tvg-logo="" group-title="未分组",游戏风云
+#EXTINF:-1 tvg-name="游戏风云" tvg-logo="" group-title="其他",游戏风云
 http://192.168.100.1:4022/udp/239.10.0.103:5140
-#EXTINF:-1 tvg-name="乐游" tvg-logo="" group-title="未分组",乐游
+#EXTINF:-1 tvg-name="乐游" tvg-logo="" group-title="其他",乐游
 http://192.168.100.1:4022/udp/239.10.0.105:5140
-#EXTINF:-1 tvg-name="金鹰纪实" tvg-logo="" group-title="未分组",金鹰纪实
+#EXTINF:-1 tvg-name="金鹰纪实" tvg-logo="" group-title="其他",金鹰纪实
 http://192.168.100.1:4022/udp/239.10.0.193:5140
-#EXTINF:-1 tvg-name="先锋乒羽" tvg-logo="" group-title="未分组",先锋乒羽
+#EXTINF:-1 tvg-name="先锋乒羽" tvg-logo="" group-title="其他",先锋乒羽
 http://192.168.100.1:4022/udp/239.10.0.90:5140
-#EXTINF:-1 tvg-name="中国交通" tvg-logo="" group-title="未分组",中国交通
+#EXTINF:-1 tvg-name="中国交通" tvg-logo="" group-title="其他",中国交通
 http://192.168.100.1:4022/udp/239.10.0.143:5140
-#EXTINF:-1 tvg-name="财富天下" tvg-logo="" group-title="未分组",财富天下
+#EXTINF:-1 tvg-name="财富天下" tvg-logo="" group-title="其他",财富天下
 http://192.168.100.1:4022/udp/239.10.0.182:5140
-#EXTINF:-1 tvg-name="家庭理财" tvg-logo="" group-title="未分组",家庭理财
+#EXTINF:-1 tvg-name="家庭理财" tvg-logo="" group-title="其他",家庭理财
 http://192.168.100.1:4022/udp/239.10.0.168:5140
-#EXTINF:-1 tvg-name="新动漫" tvg-logo="" group-title="未分组",新动漫
+#EXTINF:-1 tvg-name="新动漫" tvg-logo="" group-title="其他",新动漫
 http://192.168.100.1:4022/udp/239.10.0.159:5140
-#EXTINF:-1 tvg-name="求索记录" tvg-logo="" group-title="未分组",求索记录
+#EXTINF:-1 tvg-name="求索记录" tvg-logo="" group-title="其他",求索记录
 http://192.168.100.1:4022/udp/239.10.0.221:5140
-#EXTINF:-1 tvg-name="睛彩青少" tvg-logo="" group-title="未分组",睛彩青少
+#EXTINF:-1 tvg-name="睛彩青少" tvg-logo="" group-title="其他",睛彩青少
 http://192.168.100.1:4022/udp/239.10.0.130:5140
-#EXTINF:-1 tvg-name="睛彩广场舞" tvg-logo="" group-title="未分组",睛彩广场舞
+#EXTINF:-1 tvg-name="睛彩广场舞" tvg-logo="" group-title="其他",睛彩广场舞
 http://192.168.100.1:4022/udp/239.10.0.131:5140
-#EXTINF:-1 tvg-name="睛彩竞技" tvg-logo="" group-title="未分组",睛彩竞技
+#EXTINF:-1 tvg-name="睛彩竞技" tvg-logo="" group-title="其他",睛彩竞技
 http://192.168.100.1:4022/udp/239.10.0.224:5140
-#EXTINF:-1 tvg-name="睛彩篮球" tvg-logo="" group-title="未分组",睛彩篮球
+#EXTINF:-1 tvg-name="睛彩篮球" tvg-logo="" group-title="其他",睛彩篮球
 http://192.168.100.1:4022/udp/239.11.0.122:5140
 #EXTINF:-1 tvg-name="四川文化" tvg-logo="" group-title="四川",四川文化
 http://192.168.100.1:4022/udp/239.11.0.3:5140
@@ -322,7 +322,7 @@ http://192.168.100.1:4022/udp/239.10.0.30:5140
 http://192.168.100.1:4022/udp/239.10.0.32:5140
 #EXTINF:-1 tvg-name="稻城电视台" tvg-logo="" group-title="四川",稻城电视台
 http://192.168.100.1:4022/udp/239.10.0.29:5140
-#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://iptv.gotonas.com/logo/凤凰中文.png" group-title="港澳",凤凰中文
+#EXTINF:-1 tvg-name="凤凰中文" tvg-logo="https://tv.gotonas.com/logo/凤凰中文.png" group-title="港澳",凤凰中文
 http://192.168.100.1:4022/udp/239.11.0.153:5140
-#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://iptv.gotonas.com/logo/凤凰资讯.png" group-title="港澳",凤凰资讯
+#EXTINF:-1 tvg-name="凤凰资讯" tvg-logo="https://tv.gotonas.com/logo/凤凰资讯.png" group-title="港澳",凤凰资讯
 http://192.168.100.1:4022/udp/239.11.0.154:5140
