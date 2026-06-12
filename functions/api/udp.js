@@ -65,7 +65,7 @@ export async function onRequest(context) {
 
     // 3. IP 替换
     const ipRegex = new RegExp(DEFAULT_IP, 'g');
-    processedText = processedText.replace(ipRegex, newIpAddress);
+    processedText = processedText.replace(ipRegex, ip);
 
     // 4. APTV 时间占位符
     if (aptv) {
