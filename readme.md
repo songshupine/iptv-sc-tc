@@ -68,7 +68,7 @@ https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.1
 | `ip=host:port` | udpxy代理地址和端口 | `192.168.1.1:8888` | udpxy代理服务器地址 |
 | `aptv=1` | 启用 APTV +8时区兼容 | `aptv=1` | APTV、mytv-android 等播放器 |
 | `fcc=host:port` | 启用 FCC 快速换台模式 | `fcc=182.139.234.40:8027` | 需要快速切换频道的场景            |
-| `rtspProxy=host:port` | RTSP 转 HTTP 播放 | `rtspProxy=192.168.100.2:4022` | 不支持 RTSP 协议的播放器/外网回看   |
+| `rtspProxy=host:port` | RTSP 转 HTTP 播放 | `rtspProxy=http://192.168.100.2:4022` | 不支持 RTSP 协议的播放器/外网回看时代理，一定要加http或者https   |
 | `r2h-token=token` | r2h-token参数 | `r2h-token=mytoken` | 有r2h-token时使用   |
 | `httpProxy=host:port` | http 代理播放 | `httpProxy=http://192.168.100.2:4022` | 外网回看,一定要加http或者https   |
 | `txt=1` | 控制txt头返回，默认txt | `txt=0` | 可以让播放器接收到非txt头   |
