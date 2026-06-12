@@ -1,4 +1,4 @@
-import { getStore } from "@netlify/blobs";
+import { getStore } from "@edgeone/pages-blob";
 import MarkdownIt from "markdown-it";
 
 // 初始化 markdown 解析器
