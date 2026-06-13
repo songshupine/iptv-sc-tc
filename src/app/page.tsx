@@ -13,7 +13,7 @@ export default async function HomePage() {
   }
 
   return (
-    <main className="container mx-auto p-4 bg-white dark:bg-gray-900">
+    <main className="container mx-auto p-6 bg-white">
       <h1 className="text-2xl font-bold mb-4">四川IPTV订阅源</h1>
 
       {error && (
