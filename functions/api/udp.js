@@ -25,7 +25,19 @@ const FILE_CONFIG = {
   },
 };
 
-const DEFAULT_IP = "192.168.100.1:4022";
+const DEFAULT_IP = "http://192.168.100.1:4022";
+
+/**
+ * 确保 URL 字符串以 http:// 或 https:// 开头
+ * 如果不是，则自动在前面添加 http://
+ */
+function ensureHttpPrefix(urlStr) {
+  if (!urlStr) return urlStr; // 如果为空，直接返回
+  if (urlStr.startsWith("http://") || urlStr.startsWith("https://")) {
+    return urlStr;
+  }
+  return `http://${urlStr}`;
+}
 
 /**
  * Edge Function 主入口
@@ -38,12 +50,18 @@ export async function onRequest(context) {
   // 1. 解析 Query 参数
   const file = url.searchParams.get("file");
   const txt = url.searchParams.get("txt") || "1";
-  const ip = url.searchParams.get("ip") || DEFAULT_IP;
+  
+  // 获取原始 IP，并应用默认值
+  let ip = url.searchParams.get("ip") || DEFAULT_IP;
+  
+  // 获取代理参数
+  const httpProxyRaw = url.searchParams.get("httpProxy");
+  const rtspProxyRaw = url.searchParams.get("rtspProxy");
+
+  // 其他参数
   const aptv = url.searchParams.get("aptv");
   const fcc = url.searchParams.get("fcc");
   const r2hToken = url.searchParams.get("r2h-token");
-  const httpProxy = url.searchParams.get("httpProxy");
-  const rtspProxy = url.searchParams.get("rtspProxy");
 
   if (!FILE_CONFIG[file]) {
     return new Response("file 必须为 ct / cmcc / cu", { status: 400 });
@@ -51,7 +69,12 @@ export async function onRequest(context) {
 
   const cfg = FILE_CONFIG[file];
 
-  // 2. ✅ 从 Blob 存储获取 m3u8（核心改造点）
+  // 2. ✅ 对 ip、httpProxy、rtspProxy 进行协议头补全处理
+  ip = ensureHttpPrefix(ip);
+  const httpProxy = ensureHttpPrefix(httpProxyRaw);
+  const rtspProxy = ensureHttpPrefix(rtspProxyRaw);
+
+  // 3. 从 Blob 存储获取 m3u8（核心改造点）
   const store = getStore("iptv-m3u8"); // 替换为你的 Blob Store 名称
   const m3u8Key = `home/${cfg.m3u8}`; // 假设 m3u8 在 Blob 的 home 目录下
 
@@ -63,17 +86,17 @@ export async function onRequest(context) {
 
     let processedText = m3uText;
 
-    // 3. IP 替换
+    // 4. IP 替换
     const ipRegex = new RegExp(DEFAULT_IP, 'g');
     processedText = processedText.replace(ipRegex, ip);
 
-    // 4. APTV 时间占位符
+    // 5. APTV 时间占位符
     if (aptv) {
       const regex = new RegExp(cfg.time_pattern, 'g'); 
       processedText = processedText.replace(regex, cfg.time_replace);
     }
 
-    // 5. FCC 追加
+    // 6. FCC 追加
     if (fcc) {
       const lines = processedText.split("\n");
       for (let i = 0; i < lines.length; i++) {
@@ -85,7 +108,7 @@ export async function onRequest(context) {
       processedText = lines.join("\n");
     }
 
-    // 6. r2h-token
+    // 7. r2h-token
     if (r2hToken) {
       const lines = processedText.split("\n");
       for (let i = 0; i < lines.length; i++) {
@@ -97,7 +120,7 @@ export async function onRequest(context) {
       processedText = lines.join("\n");
     }
 
-    // 7. Catchup Proxy
+    // 8. Catchup Proxy
     const proxy = httpProxy || rtspProxy;
     if (proxy) {
       const proto = cfg.catchup_proto;
@@ -113,7 +136,7 @@ export async function onRequest(context) {
       processedText = lines.join("\n");
     }
 
-    // 8. 返回响应
+    // 9. 返回响应
     return new Response(processedText, {
       headers: {
         "Content-Type": txt === "0"
@@ -128,4 +151,3 @@ export async function onRequest(context) {
     return new Response(`Blob 读取失败: ${error.message}`, { status: 500 });
   }
 }
-
