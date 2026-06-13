@@ -85,7 +85,7 @@ https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.1
 #### 📋 参数说明
 
 | 参数 | 功能描述 | 使用示例 | 适用场景 |
-|------|----------|----------|----------|
+| :--- | :--- | :--- | :--- |
 | `file=ct` | 使用的运营商文件 | `file=ct` | `ct` `cu` `cmcc` 分别对应电信/联通/移动 |
 | `ip=host:port` | udpxy 代理地址和端口 | `ip=192.168.1.1:8888` | udpxy 代理服务器地址，可以是 `http` 或者 `https` 开头 |
 | `aptv=1` | 启用 APTV +8 时区兼容 | `aptv=1` | APTV、mytv-android 等播放器 |
