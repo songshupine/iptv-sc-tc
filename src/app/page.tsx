@@ -13,8 +13,8 @@ export default async function HomePage() {
   }
 
   return (
-    <main className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">IPTV SC TC</h1>
+    <main className="container mx-auto p-4 bg-white dark:bg-gray-900">
+      <h1 className="text-2xl font-bold mb-4">四川IPTV订阅源</h1>
 
       {error && (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
