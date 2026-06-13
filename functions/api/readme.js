@@ -1,20 +1,20 @@
 export const runtime = "edge";
 
 import MarkdownIt from "markdown-it";
-import markdownItTable from "markdown-it-table";
+import container from "markdown-it-container";
 import { getStore } from "@edgeone/pages-blob";
 
 const md = new MarkdownIt({
   html: true,
   linkify: true,
   typographer: true,
-}).use(markdownItTable);
+}).use(container, "table");
 
 export async function onRequest() {
   try {
     const store = getStore("iptv-m3u8");
     const blob = await store.get("home/readme.md");
-
+    
     if (!blob) {
       return new Response("README not found", { status: 404 });
     }
@@ -26,7 +26,6 @@ export async function onRequest() {
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>IPTV README</title>
   <style>
     body { font-family: sans-serif; padding: 24px; }
     table { border-collapse: collapse; width: 100%; }
@@ -41,14 +40,11 @@ export async function onRequest() {
 `;
 
     return new Response(html, {
-      headers: {
-        "Content-Type": "text/html; charset=utf-8",
-      },
+      headers: { "Content-Type": "text/html; charset=utf-8" },
     });
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: err.message }),
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({ error: err.message }), {
+      status: 500,
+    });
   }
 }
