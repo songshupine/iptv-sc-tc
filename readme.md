@@ -7,7 +7,7 @@
 ---
 > 此项目基于(https://github.com/suzukua/iptv-cd-telecom) 开发
 ---
-> 部署在腾讯edgeone pages上，国内访问更快更稳定
+> 部署在腾讯edgeone pages上，国内访问更快更稳定，注意部分参数使用方法和原项目有差异
 ---
 ## ✨ 核心特性
 
@@ -57,27 +57,28 @@ https://tv.gotonas.com/api/udp?file=ct&[host:port]&[其他参数]
 #### 🎯 使用示例
 
 ```
-https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&rtspProxy=http://192.168.2.30:8888
+https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&rtspProxy=192.168.2.30:8888
 ```
 
 #### 📋 参数说明
 
-| 参数 | 功能描述 | 使用示例 | 适用场景                   |
-|------|------------|------------|------------------------|
+| 参数 | 功能描述       | 使用示例              | 适用场景                   |
+|------|----------------|-----------------------|----------------------------|
 | `file=ct` | 使用的运营商文件 | `file=ct` | ct cu cmcc 分别对应电信/联通/移动|
-| `ip=host:port` | udpxy代理地址和端口 | `192.168.1.1:8888` | udpxy代理服务器地址 |
+| `ip=host:port` | udpxy代理地址和端口 | `ip=192.168.1.1:8888` | udpxy代理服务器地址，可以是http或者https开头 |
 | `aptv=1` | 启用 APTV +8时区兼容 | `aptv=1` | APTV、mytv-android 等播放器 |
 | `fcc=host:port` | 启用 FCC 快速换台模式 | `fcc=182.139.234.40:8027` | 需要快速切换频道的场景            |
-| `rtspProxy=host:port` | RTSP 转 HTTP 播放 | `rtspProxy=http://192.168.100.2:4022` | 不支持 RTSP 协议的播放器/外网回看时代理，一定要加http或者https   |
+| `rtspProxy=host:port` | RTSP 转 HTTP 播放 | `rtspProxy=192.168.100.2:4022` | 不支持 RTSP 协议的播放器/外网回看时代理，可以加http或者https   |
 | `r2h-token=token` | r2h-token参数 | `r2h-token=mytoken` | 有r2h-token时使用   |
-| `httpProxy=host:port` | http 代理播放 | `httpProxy=http://192.168.100.2:4022` | 外网回看,一定要加http或者https   |
-| `txt=1` | 控制txt头返回，默认txt | `txt=0` | 可以让播放器接收到非txt头   |
+| `httpProxy=host:port` | http 代理播放 | `httpProxy=192.168.100.2:4022` | 外网回看,可以加http或者https   |
+| `txt=1` | 控制txt头返回，默认txt | `txt=0` | 1可以让播放器接收到u3u8头   |
 
 > 📝 **说明**：
 > - 回看时间参数格式：`playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}`
 > - 电信FCC服务器：182.139.234.40:8027
 > - 移动FCC服务器：183.223.164.65:8027
-> - `rtspProxy` 支持 HTTP/HTTPS 协议，可指定 `rtspProxy=https://192.168.100.2:4022`
+> - `rtspProxy` 支持 HTTP/HTTPS 协议，可指定 `rtspProxy=https://192.168.100.2:4022` (电信回看使用)
+> - `httpProxy` 支持 HTTP/HTTPS 协议，可指定 `httpProxy=https://192.168.100.2:4022` (联通回看使用，需要较新的rtp2httpd)
 
 ---
 
