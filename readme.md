@@ -61,25 +61,11 @@ https://tv.gotonas.com/api/udp?file=ct&[host:port]&[其他参数]
 
 https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888
 
+参数之间用&隔开
 
 **APTV + FCC + RTSP 代理（复杂示例）：**
 
 https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&rtspProxy=192.168.2.30:8888
-
-
-**回放转单播 (RTSP → HTTP)：**
-
-https://tv.gotonas.com/api/udp?file=ct&ip=192.168.100.1:4022
-
-
-**排除4K和专区频道（示例）：**
-
-https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&filter=4K,专区
-
-
-**组合使用过滤和其他参数：**
-
-https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&filter=4K
 
 
 #### 📋 参数说明
@@ -87,20 +73,20 @@ https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.1
 | 参数 | 功能描述 | 使用示例 | 适用场景 |
 | :--- | :--- | :--- | :--- |
 | `file=ct` | 使用的运营商文件 | `file=ct` | `ct` `cu` `cmcc` 分别对应电信/联通/移动 |
-| `ip=host:port` | udpxy 代理地址和端口 | `ip=192.168.1.1:8888` | udpxy 代理服务器地址，可以是 `http` 或者 `https` 开头 |
+| `ip=host:port` | udpxy 代理地址和端口 | `ip=192.168.1.1:8888` | udpxy 代理服务器地址，可以是 `http` 或者 `https` 开头, 默认不写是http |
 | `aptv=1` | 启用 APTV +8 时区兼容 | `aptv=1` | APTV、mytv-android 等播放器 |
 | `fcc=host:port` | 启用 FCC 快速换台模式 | `fcc=182.139.234.40:8027` | 需要快速切换频道的场景 |
-| `rtspProxy=host:port` | RTSP 转 HTTP 播放 | `rtspProxy=192.168.100.2:4022` | 不支持 RTSP 协议的播放器 / 外网回看时代理 |
+| `rtspProxy=host:port` | RTSP 转 HTTP 播放 | `rtspProxy=192.168.100.2:4022` | 电信外网回看或者不想特殊设置路由 |
 | `r2h-token=token` | r2h-token 参数 | `r2h-token=mytoken` | 有 r2h-token 时使用 |
-| `httpProxy=host:port` | http 代理播放 | `httpProxy=192.168.100.2:4022` | 外网回看（联通），可以加 `http` 或者 `https` |
-| `txt=1` | 控制 txt 头返回，默认 txt | `txt=0` | `1` 可以让播放器接收到 `u3u8` 头 |
+| `httpProxy=host:port` | http 代理播放 | `httpProxy=192.168.100.2:4022` | 移动外网或不想特殊设置路由回看 |
+| `txt=1` | 控制 txt 头返回，默认 txt | `txt=0` | `1` 可以让播放器接收到 `m3u8` 头 |
 
 > 📝 **说明**：
-> - 回看时间参数格式：`playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}`
 > - **电信 FCC 服务器**：`182.139.234.40:8027`
 > - **移动 FCC 服务器**：`183.223.164.65:8027`
+> - 回看时间参数格式：`playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}`
 > - `rtspProxy` 支持 HTTP/HTTPS 协议，可指定 `rtspProxy=https://192.168.100.2:4022` (电信回看使用)
-> - `httpProxy` 支持 HTTP/HTTPS 协议，可指定 `httpProxy=https://192.168.100.2:4022` (联通回看使用，需要较新的 rtp2httpd)
+> - `httpProxy` 支持 HTTP/HTTPS 协议，可指定 `httpProxy=https://192.168.100.2:4022` (移动回看使用，需要较新的 rtp2httpd)
 
 ---
 
