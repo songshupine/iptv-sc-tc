@@ -1,4 +1,4 @@
-#EXTM3U name="成都移动IPTV - 2026-03-06 12:08:25" x-tvg-url="https://epg.gotonas.com/t.xml.gz"
+#EXTM3U name="四川移动IPTV - 2026-06-14 12:08:25" x-tvg-url="https://epg.gotonas.com/t.xml.gz"
 #KODIPROP:inputstream=inputstream.ffmpegdirect
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV1.png" tvg-id="CCTV1" tvg-name="CCTV1" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-1/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV1
 http://192.168.100.1:4022/udp/239.10.0.151:5140
@@ -12,7 +12,7 @@ http://192.168.100.1:4022/udp/239.11.0.101:5140
 http://192.168.100.1:4022/udp/239.11.0.109:5140
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV5.png" tvg-id="CCTV5" tvg-name="CCTV5" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-5/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV5
 http://192.168.100.1:4022/udp/239.11.0.100:5140
-#EXTINF:-1 tvg-name="CCTV5+" tvg-logo="https://tv.gotonas.com/logo/CCTV5.png" group-title="CCTV",CCTV5+
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV5.png" tvg-id="CCTV5+" tvg-name="CCTV5+" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/hdcctv05plus/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="央视频道",CCTV5+
 http://192.168.100.1:4022/udp/239.11.0.241:5140
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV6.png" tvg-id="CCTV6" tvg-name="CCTV6" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-6/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV6
 http://192.168.100.1:4022/udp/239.11.0.102:5140
@@ -34,18 +34,18 @@ http://192.168.100.1:4022/udp/239.11.0.24:5140
 http://192.168.100.1:4022/udp/239.11.0.114:5140
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV15.png" tvg-id="CCTV15" tvg-name="CCTV15" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-15/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV15
 http://192.168.100.1:4022/udp/239.11.0.26:5140
-#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV16.png" tvg-id="CCTV16" tvg-name="CCTV16" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-16/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV16
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV16.png" tvg-id="CCTV16" tvg-name="CCTV16" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/CCTV-16/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="央视频道",CCTV16
 http://192.168.100.1:4022/udp/239.11.0.67:5140
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV17.png" tvg-id="CCTV17" tvg-name="CCTV17" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-17/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="CCTV",CCTV17
 http://192.168.100.1:4022/udp/239.11.0.107:5140
-#EXTINF:-1 tvg-name="CETV1" tvg-logo="https://tv.gotonas.com/logo/CETV1.png" group-title="其他",CETV1
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CETV1.png" tvg-id="CETV1" tvg-name="中国教育1台" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/jiaoyutv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="其他",中国教育1台
 http://192.168.100.1:4022/udp/239.11.0.139:5140
-#EXTINF:-1 tvg-name="CETV2" tvg-logo="https://tv.gotonas.com/logo/CETV2.png" group-title="其他",CETV2
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CETV2.png" tvg-id="CETV2" tvg-name="中国教育2台" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-jiaoyutv2/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="其他",中国教育2台
 http://192.168.100.1:4022/udp/239.11.0.246:5140
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CETV4.png" tvg-id="CETV4" tvg-name="中国教育4台" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-jiaoyutv4/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="其他",中国教育4台
+http://192.168.100.1:4022/udp/239.11.0.248:5140
 #EXTINF:-1 tvg-name="中学生" tvg-logo="" group-title="其他",中学生
 http://192.168.100.1:4022/udp/239.11.0.247:5140
-#EXTINF:-1 tvg-name="CETV4" tvg-logo="https://tv.gotonas.com/logo/CETV4.png" group-title="其他",CETV4
-http://192.168.100.1:4022/udp/239.11.0.248:5140
 #EXTINF:-1 tvg-name="CGTN西语" tvg-logo="https://tv.gotonas.com/logo/CGTN.png" group-title="其他",CGTN西语
 http://192.168.100.1:4022/udp/239.11.0.79:5140
 #EXTINF:-1 tvg-name="CGTN法语" tvg-logo="https://tv.gotonas.com/logo/CGTN.png" group-title="其他",CGTN法语
@@ -86,13 +86,13 @@ http://192.168.100.1:4022/udp/239.11.0.91:5140
 http://192.168.100.1:4022/udp/239.11.0.120:5140
 #EXTINF:-1 tvg-name="咪咕4K" tvg-logo="https://tv.gotonas.com/logo/4K.png" group-title="其他",咪咕4K
 http://192.168.100.1:4022/udp/239.10.0.240:5140
-#EXTINF:-1 tvg-name="北京卫视" tvg-logo="" group-title="卫视",北京卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/北京卫视.png" tvg-id="北京卫视" tvg-name="北京卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/beijingstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",北京卫视
 http://192.168.100.1:4022/udp/239.11.0.121:5140
 #EXTINF:-1 tvg-name="河北卫视" tvg-logo="" group-title="卫视",河北卫视
 http://192.168.100.1:4022/udp/239.11.0.31:5140
-#EXTINF:-1 tvg-name="东方卫视" tvg-logo="" group-title="卫视",东方卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/东方卫视.png" tvg-id="东方卫视" tvg-name="东方卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/dongfangstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",东方卫视
 http://192.168.100.1:4022/udp/239.11.0.68:5140
-#EXTINF:-1 tvg-name="湖南卫视" tvg-logo="" group-title="卫视",湖南卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/湖南卫视.png" tvg-id="湖南卫视" tvg-name="湖南卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/hunanstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",湖南卫视
 http://192.168.100.1:4022/udp/239.11.0.119:5140
 #EXTINF:-1 tvg-name="黑龙江卫视" tvg-logo="" group-title="卫视",黑龙江卫视
 http://192.168.100.1:4022/udp/239.11.0.36:5140
@@ -100,23 +100,23 @@ http://192.168.100.1:4022/udp/239.11.0.36:5140
 http://192.168.100.1:4022/udp/239.11.0.35:5140
 #EXTINF:-1 tvg-name="江西卫视" tvg-logo="" group-title="卫视",江西卫视
 http://192.168.100.1:4022/udp/239.11.0.42:5140
-#EXTINF:-1 tvg-name="东南卫视" tvg-logo="" group-title="卫视",东南卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/东南卫视.png" tvg-id="东南卫视" tvg-name="东南卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/dongnanstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",东南卫视
 http://192.168.100.1:4022/udp/239.11.0.41:5140
-#EXTINF:-1 tvg-name="河南卫视" tvg-logo="" group-title="卫视",河南卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/河南卫视.png" tvg-id="河南卫视" tvg-name="河南卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/henanstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",河南卫视
 http://192.168.100.1:4022/udp/239.11.0.44:5140
-#EXTINF:-1 tvg-name="浙江卫视" tvg-logo="" group-title="卫视",浙江卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/浙江卫视.png" tvg-id="浙江卫视" tvg-name="浙江卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/zhejiangstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",浙江卫视
 http://192.168.100.1:4022/udp/239.11.0.70:5140
-#EXTINF:-1 tvg-name="深圳卫视" tvg-logo="" group-title="卫视",深圳卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/深圳卫视.png" tvg-id="深圳卫视" tvg-name="深圳卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/shenzhenstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",深圳卫视
 http://192.168.100.1:4022/udp/239.11.0.71:5140
-#EXTINF:-1 tvg-name="山东卫视" tvg-logo="" group-title="卫视",山东卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/山东卫视.png" tvg-id="山东卫视" tvg-name="山东卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/shandongstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",山东卫视
 http://192.168.100.1:4022/udp/239.11.0.73:5140
-#EXTINF:-1 tvg-name="湖北卫视" tvg-logo="" group-title="卫视",湖北卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/湖北卫视.png" tvg-id="湖北卫视" tvg-name="湖北卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/hubeistv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",湖北卫视
 http://192.168.100.1:4022/udp/239.11.0.74:5140
-#EXTINF:-1 tvg-name="江苏卫视" tvg-logo="" group-title="卫视",江苏卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/江苏卫视.png" tvg-id="江苏卫视" tvg-name="江苏卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/jiangsustv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",江苏卫视
 http://192.168.100.1:4022/udp/239.11.0.76:5140
-#EXTINF:-1 tvg-name="四川卫视" tvg-logo="" group-title="卫视",四川卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/四川卫视.png" tvg-id="四川卫视" tvg-name="四川卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/sichuanstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",四川卫视
 http://192.168.100.1:4022/udp/239.11.0.78:5140
-#EXTINF:-1 tvg-name="广东卫视" tvg-logo="" group-title="卫视",广东卫视
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/广东卫视.png" tvg-id="广东卫视" tvg-name="广东卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/guangdongstv/{utc:YmdHMS}/{utcend:YmdHMS}/1.m3u8" group-title="卫视",广东卫视
 http://192.168.100.1:4022/udp/239.11.0.115:5140
 #EXTINF:-1 tvg-name="广西卫视" tvg-logo="" group-title="卫视",广西卫视
 http://192.168.100.1:4022/udp/239.11.0.48:5140
