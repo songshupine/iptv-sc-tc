@@ -3,7 +3,7 @@ name: Auto Update IPTV List
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # 每天 UTC 时间凌晨 2 点运行（即北京时间上午 10 点）
+    - cron: '0 23 * * *'  # 每天 UTC 时间凌晨 23 点运行（即北京时间上午 7 点）
   workflow_dispatch:      # 允许手动触发
 
 jobs:
