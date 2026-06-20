@@ -1,7 +1,7 @@
 import json
 import re
 import requests
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 def append_telecom_add_to_m3u8(udpxy_m3u8_file):
     """
@@ -71,8 +71,9 @@ def extract_channels_to_text():
 
     # 2. 准备输出内容
     output_lines = []
+    UTC8 = timezone(timedelta(hours=8))
     # 写入头
-    header = f'#EXTM3U name="四川移动IPTV - {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}" x-tvg-url="{epg_file}"'
+    header = f'#EXTM3U name="四川移动IPTV - {datetime.now(UTC8).strftime("%Y-%m-%d %H:%M:%S")}" x-tvg-url="{epg_file}"'
     output_lines.append(header)
 
     # 【新增】3. 按照 index 字段进行数字大小升序排序
