@@ -72,7 +72,7 @@ def extract_channels_to_text():
     # 2. 准备输出内容
     output_lines = []
     # 写入头
-    header = f'#EXTM3U name="四川移动IPTV - {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}" x-tvg-url={epg_file}'
+    header = f'#EXTM3U name="四川移动IPTV - {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}" x-tvg-url="{epg_file}"'
     output_lines.append(header)
 
     # 【新增】3. 按照 index 字段进行数字大小升序排序
