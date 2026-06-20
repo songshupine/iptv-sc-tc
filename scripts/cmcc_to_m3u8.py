@@ -43,9 +43,9 @@ def extract_channels_to_text():
     catchup_source = 'http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/channel_uid/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8'
     upd_ip = 'http://192.168.100.1:4022/udp/'
     group_map = {
-        "CCTV": ["CCTV"],
+        "CCTV": ["CCTV", "央视"],
         "卫视": ["卫视"],
-        "四川": ["四川", "SC", "CD", "成都"]
+        "四川": ["四川", "SC", "CD", "成都", "峨眉"]
     }
     
     try:
@@ -97,14 +97,21 @@ def extract_channels_to_text():
         rtp_base = rtp_match.group(1) if rtp_match else str(live_url)
         tvg_id_match = re.search(r'logo/(.+?)\.', channel_icon)
         tvg_id = tvg_id_match.group(1) if tvg_id_match else channel_name
-        group = next((g for g, keywords in group_map.items() if any(kw in tvg_id for kw in keywords)), "其他")
+
+        tvg_id_upper = tvg_id.upper()
+        channel_name_upper = channel_name.upper()
+        group = next(
+            (g for g, keywords in group_map.items() if any(kw in tvg_id_upper or kw in channel_name_upper for kw in keywords)), 
+            "其他"
+        )
+        
         clean_uuid = uuid.removeprefix("ysten-")
         catchup_source_new = catchup_source.replace("channel_uid", clean_uuid)
 
         output_lines.append('#KODIPROP:inputstream=inputstream.ffmpegdirect')
         
         # 将字段组合成一行
-        line = f'#EXTINF:-1 tvg-logo="{logo_url}{tvg_id}.png" tvg-id="{tvg_id}" tvg-name="{channel_name}" catchup="default" catchup-days="5" catchup-source="{catchup_source_new}" group-title="{group}",{tvg_id}'
+        line = f'#EXTINF:-1 tvg-logo="{logo_url}{tvg_id}.png" tvg-id="{tvg_id}" tvg-name="{channel_name}" catchup="default" catchup-days="5" catchup-source="{catchup_source_new}" group-title="{group}",{channel_name}'
         output_lines.append(line)
         
         line = upd_ip + rtp_base.split("rtp://")[-1]
