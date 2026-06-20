@@ -93,8 +93,8 @@ def extract_channels_to_text():
         channel_name = item.get('channelName', '未知频道')
         live_url = item.get('livePlayUrl', '') 
 
-        # 提取 RTP 地址基础部分 (rtp://... 到 ? 之前)
-        rtp_match = re.search(r'(rtp://[^?]+)', str(live_url))
+        # 提取 RTP 地址基础部分 (兼容 rtp:// 和 rtp://@，提取到 ? 之前)
+        rtp_match = re.search(r'(rtp://@?[^?]+)', str(live_url))
         rtp_base = rtp_match.group(1) if rtp_match else str(live_url)
         tvg_id_match = re.search(r'logo/(.+?)\.', channel_icon)
         tvg_id = tvg_id_match.group(1) if tvg_id_match else channel_name
