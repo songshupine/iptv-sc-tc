@@ -1,4 +1,4 @@
-#EXTM3U name="四川移动IPTV - 2026-06-20 19:20:40" x-tvg-url="https://epg.gotonas.com/t.xml.gz"
+#EXTM3U name="四川移动IPTV - 2026-06-20 19:36:25" x-tvg-url="https://epg.gotonas.com/t.xml.gz"
 #KODIPROP:inputstream=inputstream.ffmpegdirect
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV1.png" tvg-id="CCTV1" tvg-name="CCTV-1" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-1/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="CCTV",CCTV-1
 http://192.168.100.1:4022/udp/239.11.0.65:5140
@@ -301,10 +301,10 @@ http://192.168.100.1:4022/udp/239.10.0.33:5140
 http://192.168.100.1:4022/udp/239.10.0.91:5140
 #KODIPROP:inputstream=inputstream.ffmpegdirect
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/广东卫视4K.png" tvg-id="广东卫视4K" tvg-name="广东卫视4K" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/gdws4k/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="卫视",广东卫视4K
-http://192.168.100.1:4022/udp/@239.10.0.94:5140
+http://192.168.100.1:4022/udp/239.10.0.94:5140
 #KODIPROP:inputstream=inputstream.ffmpegdirect
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/深圳卫视4K.png" tvg-id="深圳卫视4K" tvg-name="深圳卫视4K" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/szws4k/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="卫视",深圳卫视4K
-http://192.168.100.1:4022/udp/@239.10.0.93:5140
+http://192.168.100.1:4022/udp/239.10.0.93:5140
 #KODIPROP:inputstream=inputstream.ffmpegdirect
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV-4K.png" tvg-id="CCTV-4K" tvg-name="CCTV-4K" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/CCTV-4K/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="CCTV",CCTV-4K
 http://192.168.100.1:4022/udp/239.11.0.61:5140
