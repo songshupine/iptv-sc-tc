@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> 📺 **IPTV 机顶盒替代方案** | 支持回看、时移 | 每周不定时更新  
+> 📺 **IPTV 机顶盒替代方案** | 电信移动支持回看、时移 | 电信和移动每天自动更新，联通不定时更新  
 > 📅 **更新时间**：2026-06-20 15:15:12 | 共 **150** 条频道信息
 
 ---
@@ -23,30 +23,13 @@
 
 ## 📖 使用指南
 
-### 🚀 方式一：官方组播 / 单播源
-
-直接复制以下地址到播放器即可使用，无需额外配置：
-
-**电信组播标准版：**
-
-https://tv.gotonas.com/home/iptv.m3u8
-
-
-**电信组播 APTV 兼容版：**
-
-https://tv.gotonas.com/home/apt_iptv.m3u8
-
-
 **联通单播版：**
 
 https://tv.gotonas.com/home/cun_iptv.m3u8
 
-
-> 💡 **提示**：两个版本电信都支持时移功能，APTV 版针对时区兼容性进行了优化
-
 ---
 
-### 🔧 方式二：组播转单播（推荐）
+### 🔧 组播转单播
 
 适用于已搭建 udpxy、msd_lite、rtp2httpd 等工具的用户。
 
