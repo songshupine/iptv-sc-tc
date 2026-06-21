@@ -29,7 +29,7 @@ https://tv.gotonas.com/home/cun_iptv.m3u8
 
 ---
 
-### 🔧 组播转单播
+**组播转单播：**
 
 适用于已搭建 udpxy、msd_lite、rtp2httpd 等工具的用户。
 
@@ -44,12 +44,15 @@ https://tv.gotonas.com/api/udp?file=ct&[host:port]&[其他参数]
 
 https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888
 
+https://tv.gotonas.com/api/udp?file=cmcc&ip=192.168.2.30:8888
+
 参数之间用&隔开
 
 **APTV + FCC + RTSP 代理（复杂示例）：**
 
 https://tv.gotonas.com/api/udp?file=ct&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&rtspProxy=192.168.2.30:8888
 
+https://tv.gotonas.com/api/udp?file=cmcc&ip=192.168.2.30:8888&aptv=1&fcc=183.223.164.65:8027&httpProxy=192.168.2.30:8888
 
 #### 📋 参数说明
 
