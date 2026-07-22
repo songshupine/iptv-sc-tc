@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > 📺 **IPTV 机顶盒替代方案** | 电信移动支持回看、时移 | 电信和移动每天自动更新，联通不定时更新  
-> 📅 **更新时间**：2026-07-22 07:47:12 | 共 **150** 条频道信息
+> 📅 **更新时间**：2026-07-23 07:54:12 | 共 **150** 条频道信息
 
 ---
 > 此项目基于 [suzukua/iptv-cd-telecom](https://github.com/suzukua/iptv-cd-telecom) 开发
