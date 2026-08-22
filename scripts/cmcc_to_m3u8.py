@@ -33,6 +33,26 @@ def append_telecom_add_to_m3u8(udpxy_m3u8_file):
     except Exception as e:
         print(f"⚠️ 追加过程中出错: {e}")
 
+def clean_uuid_map(uuid_raw):
+    """
+    对 clean_uuid 进行特殊映射：
+      ysten-cctv-1  -> cctv-1
+      ysten-cctv-5  -> cctv-5
+      ysten-cctv5plus -> hdcctv05plus
+    其他保持不变。
+    """
+    # 先去掉 "ysten-" 前缀
+    cleaned = uuid_raw.removeprefix("ysten-") if uuid_raw.startswith("ysten-") else uuid_raw
+    
+    # 特殊映射表
+    mapping = {
+        "cctv-1": "cctv-1",
+        "cctv-5": "cctv-5",
+        "cctv5plus": "hdcctv05plus",
+    }
+    
+    return mapping.get(cleaned, cleaned)
+
 def extract_channels_to_text():
     # 1. 读取 JSON 文件
     input_filename = 'https://epg.gotonas.com/cmcc_channel.json'
@@ -98,6 +118,7 @@ def extract_channels_to_text():
         rtp_base = rtp_match.group(1) if rtp_match else str(live_url)
         tvg_id_match = re.search(r'logo/(.+?)\.', channel_icon)
         tvg_id = tvg_id_match.group(1) if tvg_id_match else channel_name
+        channel_name_clean = channel_name.replace("4K", "")
 
         tvg_id_upper = tvg_id.upper()
         channel_name_upper = channel_name.upper()
@@ -106,13 +127,14 @@ def extract_channels_to_text():
             "其他"
         )
         
-        clean_uuid = uuid.removeprefix("ysten-")
+        # 使用映射函数处理 uuid
+        clean_uuid = clean_uuid_map(uuid)
         catchup_source_new = catchup_source.replace("channel_uid", clean_uuid)
 
         output_lines.append('#KODIPROP:inputstream=inputstream.ffmpegdirect')
         
         # 将字段组合成一行
-        line = f'#EXTINF:-1 tvg-logo="{logo_url}{tvg_id}.png" tvg-id="{tvg_id}" tvg-name="{channel_name}" catchup="default" catchup-days="5" catchup-source="{catchup_source_new}" group-title="{group}",{channel_name}'
+        line = f'#EXTINF:-1 tvg-logo="{logo_url}{tvg_id}.png" tvg-id="{tvg_id}" tvg-name="{channel_name_clean}" catchup="default" catchup-days="5" catchup-source="{catchup_source_new}" group-title="{group}",{channel_name}'
         output_lines.append(line)
         
         line = upd_ip + rtp_base.split("rtp://")[-1]
@@ -133,4 +155,3 @@ def extract_channels_to_text():
 
 if __name__ == '__main__':
     extract_channels_to_text()
-	
