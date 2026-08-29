@@ -5,13 +5,12 @@ from datetime import datetime, timezone, timedelta
 
 def append_telecom_add_to_m3u8(udpxy_m3u8_file):
     """
-    将 home/telecom_add.m3u8 的内容追加到指定的 M3U8 文件末尾。
+    将 cmcc_add.m3u8 的内容追加到指定的 M3U8 文件末尾。
     
     :param udpxy_m3u8_file: generateUdpxyM3U8 生成的目标文件路径（如 'telecom.m3u8'）
     """
     
     add_file = "./public/home/cmcc_add.m3u8"
-    #add_file = "./cmcc_add.m3u8"
     
     try:
         with open(add_file, "r", encoding="utf-8") as f_add:
@@ -22,9 +21,8 @@ def append_telecom_add_to_m3u8(udpxy_m3u8_file):
             return
 
         with open(udpxy_m3u8_file, "a", encoding="utf-8") as f_out:
-            # 确保主文件末尾有换行，避免合并行
             f_out.write("\n")
-            f_out.write(extra_content.rstrip("\n") + "\n")  # 避免多余空行，但保留最后一行换行
+            f_out.write(extra_content.rstrip("\n") + "\n")
         
         print(f"✅ 已成功将 {add_file} 内容追加到 {udpxy_m3u8_file}")
     
@@ -41,10 +39,8 @@ def clean_uuid_map(uuid_raw):
       ysten-cctv5plus -> hdcctv05plus
     其他保持不变。
     """
-    # 先去掉 "ysten-" 前缀
     cleaned = uuid_raw.removeprefix("ysten-") if uuid_raw.startswith("ysten-") else uuid_raw
     
-    # 特殊映射表
     mapping = {
         "cctv-1": "cctv-1",
         "cctv-5": "cctv-5",
@@ -53,10 +49,40 @@ def clean_uuid_map(uuid_raw):
     
     return mapping.get(cleaned, cleaned)
 
+def process_channel_item(item, logo_url, catchup_source, upd_ip, group_map):
+    """
+    处理单个频道条目，返回 M3U8 格式的三行内容（KODIPROP、EXTINF、URL）。
+    """
+    uuid = item.get('uuid', 'N/A')
+    channel_icon = item.get('channelIcon', '')
+    channel_name = item.get('channelName', '未知频道')
+    live_url = item.get('livePlayUrl', '')
+
+    rtp_match = re.search(r'rtp://@?([^?]+)', str(live_url))
+    rtp_base = rtp_match.group(1) if rtp_match else str(live_url)
+    tvg_id_match = re.search(r'logo/(.+?)\.', channel_icon)
+    tvg_id = tvg_id_match.group(1) if tvg_id_match else channel_name
+    channel_name_clean = channel_name.replace("4K", "")
+
+    tvg_id_upper = tvg_id.upper()
+    channel_name_upper = channel_name.upper()
+    group = next(
+        (g for g, keywords in group_map.items() if any(kw in tvg_id_upper or kw in channel_name_upper for kw in keywords)),
+        "其他"
+    )
+
+    clean_uuid = clean_uuid_map(uuid)
+    catchup_source_new = catchup_source.replace("channel_uid", clean_uuid)
+
+    lines = []
+    lines.append('#KODIPROP:inputstream=inputstream.ffmpegdirect')
+    lines.append(f'#EXTINF:-1 tvg-logo="{logo_url}{tvg_id}.png" tvg-id="{tvg_id}" tvg-name="{channel_name_clean}" catchup="default" catchup-days="5" catchup-source="{catchup_source_new}" group-title="{group}",{channel_name}')
+    lines.append(upd_ip + rtp_base.split("rtp://")[-1])
+    return lines
+
 def extract_channels_to_text():
-    # 1. 读取 JSON 文件
     input_filename = 'https://epg.gotonas.com/cmcc_channel.json'
-    #output_filename = 'cmcc_channel.m3u8'
+    input_filename_b = 'https://epg.gotonas.com/cmcc_channel_b.json'
     output_filename = './public/home/cmcc.m3u8'
     epg_file = 'https://epg.gotonas.com/t.xml.gz'
     logo_url = 'https://tv.gotonas.com/logo/'
@@ -67,90 +93,103 @@ def extract_channels_to_text():
         "卫视": ["卫视"],
         "四川": ["四川", "SC", "CD", "成都", "峨眉"]
     }
-    
+
+    # ========== 1. 读取主 JSON ==========
     try:
-        # 发送 GET 请求获取网页内容
-        # timeout=10 表示 10 秒没反应就放弃，防止程序卡死
-        response = requests.get(input_filename, timeout=10) 
-        
-        # 检查请求是否成功 (状态码 200 代表成功)
-        response.raise_for_status() 
-        
-        # 将获取到的文本内容解析为 JSON 格式
-        json_data = response.json() 
-        
-        print(f"成功从网络加载 {len(json_data)} 个频道数据。")
+        response = requests.get(input_filename, timeout=10)
+        response.raise_for_status()
+        json_data = response.json()
+        print(f"成功从网络加载主频道数据：{len(json_data)} 个频道。")
     except requests.RequestException as e:
-        # 捕获所有网络相关的错误（如无法连接、超时、404等）
         print(f"网络请求错误：{e}")
         return
     except json.JSONDecodeError as e:
-        # 捕获 JSON 格式解析错误
         print(f"JSON 解析错误：{e}")
         return
 
-    # 2. 准备输出内容
+    # ========== 2. 读取备用 JSON ==========
+    json_data_b = []
+    try:
+        response_b = requests.get(input_filename_b, timeout=10)
+        response_b.raise_for_status()
+        json_data_b = response_b.json()
+        print(f"成功从网络加载备用频道数据：{len(json_data_b)} 个频道。")
+    except requests.RequestException as e:
+        print(f"⚠️ 备用频道网络请求错误（已跳过）：{e}")
+    except json.JSONDecodeError as e:
+        print(f"⚠️ 备用频道 JSON 解析错误（已跳过）：{e}")
+
+    # ========== 3. 收集主文件所有 UUID（经 clean_uuid_map 处理后） ==========
+    uuid_set_main = set()
+    for item in json_data:
+        uuid = item.get('uuid', '')
+        if uuid:
+            uuid_set_main.add(clean_uuid_map(uuid))
+
+    # ========== 4. 过滤备用频道：UUID 不重复 且 livePlayUrl 以 rtp 或 @rtp 开头 ==========
+    extra_channels = []
+    skipped_uuid_dup = 0
+    skipped_url = 0
+
+    for item in json_data_b:
+        uuid = item.get('uuid', '')
+        clean_uuid = clean_uuid_map(uuid) if uuid else ''
+        live_url = str(item.get('livePlayUrl', ''))
+
+        # 条件1：UUID 不能在主文件中已存在
+        if clean_uuid in uuid_set_main:
+            skipped_uuid_dup += 1
+            continue
+
+        # 条件2：livePlayUrl 必须以 rtp 或 @rtp 开头
+        if not (live_url.startswith("rtp") or live_url.startswith("@rtp")):
+            skipped_url += 1
+            continue
+
+        extra_channels.append(item)
+        # 加入已处理集合，防止备用文件自身 UUID 重复
+        uuid_set_main.add(clean_uuid)
+
+    print(f"备用频道过滤结果：共 {len(json_data_b)} 条 → 新增 {len(extra_channels)} 条（UUID重复跳过 {skipped_uuid_dup}，非rtp地址跳过 {skipped_url}）")
+
+    # ========== 5. 按 index 排序 ==========
+    try:
+        json_data.sort(key=lambda x: int(x.get('index', 0)))
+        print("主频道数据已按 Index 升序排序。")
+    except ValueError as e:
+        print(f"警告：主频道 Index 字段包含非数字内容，排序可能不准确。错误信息: {e}")
+
+    try:
+        extra_channels.sort(key=lambda x: int(x.get('index', 0)))
+        if extra_channels:
+            print("备用频道数据已按 Index 升序排序。")
+    except ValueError as e:
+        print(f"警告：备用频道 Index 字段包含非数字内容，排序可能不准确。错误信息: {e}")
+
+    # ========== 6. 生成 M3U8 内容 ==========
     output_lines = []
     UTC8 = timezone(timedelta(hours=8))
-    # 写入头
     header = f'#EXTM3U name="四川移动IPTV - {datetime.now(UTC8).strftime("%Y-%m-%d %H:%M:%S")}" x-tvg-url="{epg_file}"'
     output_lines.append(header)
 
-    # 【新增】3. 按照 index 字段进行数字大小升序排序
-    # 注意：因为 index 是字符串，必须用 int() 转换，否则 "10" 会排在 "2" 前面
-    try:
-        json_data.sort(key=lambda x: int(x.get('index', 0)))
-        print("频道数据已按 Index 升序排序。")
-    except ValueError as e:
-        print(f"警告：Index 字段包含非数字内容，排序可能不准确。错误信息: {e}")
-
-    # 4. 遍历排序后的数据并处理
+    # 处理主频道
     for item in json_data:
-        # 提取基础字段
-        index = item.get('index', 'N/A')
-        uuid = item.get('uuid', 'N/A')
-        channel_icon = item.get('channelIcon', '')
-        channel_name = item.get('channelName', '未知频道')
-        live_url = item.get('livePlayUrl', '') 
+        output_lines.extend(process_channel_item(item, logo_url, catchup_source, upd_ip, group_map))
 
-        # 提取 rtp:// 或 rtp://@ 后面的 IP 和端口部分 (到 ? 之前)
-        rtp_match = re.search(r'rtp://@?([^?]+)', str(live_url))
-        rtp_base = rtp_match.group(1) if rtp_match else str(live_url)
-        tvg_id_match = re.search(r'logo/(.+?)\.', channel_icon)
-        tvg_id = tvg_id_match.group(1) if tvg_id_match else channel_name
-        channel_name_clean = channel_name.replace("4K", "")
+    # 处理备用频道（追加在主频道之后）
+    for item in extra_channels:
+        output_lines.extend(process_channel_item(item, logo_url, catchup_source, upd_ip, group_map))
 
-        tvg_id_upper = tvg_id.upper()
-        channel_name_upper = channel_name.upper()
-        group = next(
-            (g for g, keywords in group_map.items() if any(kw in tvg_id_upper or kw in channel_name_upper for kw in keywords)), 
-            "其他"
-        )
-        
-        # 使用映射函数处理 uuid
-        clean_uuid = clean_uuid_map(uuid)
-        catchup_source_new = catchup_source.replace("channel_uid", clean_uuid)
-
-        output_lines.append('#KODIPROP:inputstream=inputstream.ffmpegdirect')
-        
-        # 将字段组合成一行
-        line = f'#EXTINF:-1 tvg-logo="{logo_url}{tvg_id}.png" tvg-id="{tvg_id}" tvg-name="{channel_name_clean}" catchup="default" catchup-days="5" catchup-source="{catchup_source_new}" group-title="{group}",{channel_name}'
-        output_lines.append(line)
-        
-        line = upd_ip + rtp_base.split("rtp://")[-1]
-        output_lines.append(line)
-
-    # 5. 写入文本文件并打印
+    # ========== 7. 写入文件 ==========
     with open(output_filename, 'w', encoding='utf-8') as f:
         f.write('\n'.join(output_lines))
-    
+
     append_telecom_add_to_m3u8(output_filename)
-    
+
     print(f"成功生成提取文件：{output_filename}")
     print("\n预览前 5 行数据：")
     for i in range(min(5, len(output_lines))):
         print(output_lines[i])
-
 
 
 if __name__ == '__main__':
