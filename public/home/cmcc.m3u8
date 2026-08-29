@@ -1,4 +1,4 @@
-#EXTM3U name="四川移动IPTV - 2026-08-29 11:57:33" x-tvg-url="https://epg.gotonas.com/t.xml.gz"
+#EXTM3U name="四川移动IPTV - 2026-08-29 13:25:26" x-tvg-url="https://epg.gotonas.com/t.xml.gz"
 #KODIPROP:inputstream=inputstream.ffmpegdirect
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/CCTV1.png" tvg-id="CCTV1" tvg-name="CCTV-1" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/cctv-1/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="CCTV",CCTV-1
 http://192.168.100.1:4022/udp/239.11.0.65:5140
@@ -323,6 +323,192 @@ http://192.168.100.1:4022/udp/239.11.0.90:5140
 #KODIPROP:inputstream=inputstream.ffmpegdirect
 #EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/山东卫视4K.png" tvg-id="山东卫视4K" tvg-name="山东卫视" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/shandongweishi50p/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="卫视",山东卫视4K
 http://192.168.100.1:4022/udp/239.11.0.91:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="宏伟巨献" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-schongweijuxian/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",宏伟巨献
+http://192.168.100.1:4022/udp/239.10.0.208:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="爱上古装" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-guzhuangjc/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",爱上古装
+http://192.168.100.1:4022/udp/239.10.0.126:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="IPTV谍战剧场" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-IPTVdiezhanjc/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",IPTV谍战剧场
+http://192.168.100.1:4022/udp/239.10.0.123:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="IPTV热播剧场" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-IPTVrebojc/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",IPTV热播剧场
+http://192.168.100.1:4022/udp/239.10.0.121:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/WXJC.png" tvg-id="WXJC" tvg-name="武侠剧场" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-wuxiajc/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",武侠剧场
+http://192.168.100.1:4022/udp/239.10.0.133:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/20191106jljc.png" tvg-id="20191106jljc" tvg-name="爱上军旅" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-junlvjc/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",爱上军旅
+http://192.168.100.1:4022/udp/239.10.0.125:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="城市剧场" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-dushijc/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",城市剧场
+http://192.168.100.1:4022/udp/239.10.0.124:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="IPTV经典电影" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-IPTVjingdiandy/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",IPTV经典电影
+http://192.168.100.1:4022/udp/239.10.0.122:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="爱上影院" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-jiatingyy/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",爱上影院
+http://192.168.100.1:4022/udp/239.10.0.127:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="光影" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-guangying/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",光影
+http://192.168.100.1:4022/udp/239.10.0.153:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/XY.png" tvg-id="XY" tvg-name="星影" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-xingying/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",星影
+http://192.168.100.1:4022/udp/239.10.0.156:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="喜剧影院" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-xijuyy/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",喜剧影院
+http://192.168.100.1:4022/udp/239.10.0.132:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="精选" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-jingxuan/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",精选
+http://192.168.100.1:4022/udp/239.10.0.185:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="动漫秀场" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scdongmanxc/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",动漫秀场
+http://192.168.100.1:4022/udp/239.10.0.101:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="积木宝贝" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-jimubaby/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",积木宝贝
+http://192.168.100.1:4022/udp/239.10.0.157:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="启蒙乐园" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-qimengleyuan/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",启蒙乐园
+http://192.168.100.1:4022/udp/239.10.0.158:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="阳光日记" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scyangguangrj/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",阳光日记
+http://192.168.100.1:4022/udp/239.10.0.209:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="童童乐园" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-sctongtongley/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",童童乐园
+http://192.168.100.1:4022/udp/239.10.0.210:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="儿歌天地" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scergetiandi/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",儿歌天地
+http://192.168.100.1:4022/udp/239.10.0.211:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="国学课堂" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scguoxueket/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",国学课堂
+http://192.168.100.1:4022/udp/239.10.0.212:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="嘻哈动漫" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scxihakaton/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",嘻哈动漫
+http://192.168.100.1:4022/udp/239.10.0.213:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="酷乐卡通" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-sckulekaton/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",酷乐卡通
+http://192.168.100.1:4022/udp/239.10.0.214:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="快乐假期" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-schuanlejiaqi/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",快乐假期
+http://192.168.100.1:4022/udp/239.10.0.215:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="奇趣动漫" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scqiqukaton/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",奇趣动漫
+http://192.168.100.1:4022/udp/239.10.0.216:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="欢乐启蒙" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-schuanleqm/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",欢乐启蒙
+http://192.168.100.1:4022/udp/239.10.0.217:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="玩具乐园" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scwanjuleyuan/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",玩具乐园
+http://192.168.100.1:4022/udp/239.10.0.218:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="趣乐探险" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scquletanxian/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",趣乐探险
+http://192.168.100.1:4022/udp/239.10.0.219:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/yingshishaoer.png" tvg-id="yingshishaoer" tvg-name="动画" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-donghua/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",动画
+http://192.168.100.1:4022/udp/239.10.0.163:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/AS4K.png" tvg-id="AS4K" tvg-name="爱上" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-20M-2160P-love4k/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",爱上4K
+http://192.168.100.1:4022/udp/239.11.0.120:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="高网" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-gaowang/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",高网
+http://192.168.100.1:4022/udp/239.10.0.164:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="人文纪录" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-tiyujj/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",人文纪录
+http://192.168.100.1:4022/udp/239.10.0.166:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="极速汽车" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-qicheshijie/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",极速汽车
+http://192.168.100.1:4022/udp/239.10.0.168:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="电竞世界" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-dianjingsj/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",电竞世界
+http://192.168.100.1:4022/udp/239.10.0.167:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="游戏风云" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scyouxify/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",游戏风云
+http://192.168.100.1:4022/udp/239.10.0.103:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/20191106qjs.png" tvg-id="20191106qjs" tvg-name="乐游" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scquanjishi/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",乐游
+http://192.168.100.1:4022/udp/239.10.0.105:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/20191106qsjl.png" tvg-id="20191106qsjl" tvg-name="求索记录" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scqiusuojl/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",求索记录
+http://192.168.100.1:4022/udp/239.10.0.221:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="高清纪实" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-gaoqingjishi/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",高清纪实
+http://192.168.100.1:4022/udp/239.10.0.192:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="金鹰纪实" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-jinyingjishi/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",金鹰纪实
+http://192.168.100.1:4022/udp/239.10.0.193:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="天府TV-综合" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-tianfuTV/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",天府TV-综合
+http://192.168.100.1:4022/udp/239.10.0.189:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="乐趣综合" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-sihaiaoyou/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",乐趣综合
+http://192.168.100.1:4022/udp/239.10.0.195:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="陶瓷" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-sctaoci/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",陶瓷
+http://192.168.100.1:4022/udp/239.10.0.107:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="地理" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-dili/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",地理
+http://192.168.100.1:4022/udp/239.10.0.190:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="国学" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-guoxue/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",国学
+http://192.168.100.1:4022/udp/239.10.0.186:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="辣妈学院" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-lamaxueyuan/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",辣妈学院
+http://192.168.100.1:4022/udp/239.10.0.137:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="魔力荟萃" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-molihuicui/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",魔力荟萃
+http://192.168.100.1:4022/udp/239.10.0.140:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="时尚天地" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-fashionzouxiu/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",时尚天地
+http://192.168.100.1:4022/udp/239.10.0.141:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="星动娱乐" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-xingdongyule/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",星动娱乐
+http://192.168.100.1:4022/udp/239.10.0.142:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="时尚生活" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-tuokouxiu/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",时尚生活
+http://192.168.100.1:4022/udp/239.10.0.144:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="魔力TV" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-relitv/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",魔力TV
+http://192.168.100.1:4022/udp/239.10.0.145:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="生活时尚" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-scshenghuosc/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",生活时尚
+http://192.168.100.1:4022/udp/239.10.0.102:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="法治天地" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-fazhitiandi/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",法治天地
+http://192.168.100.1:4022/udp/239.10.0.180:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="金色学堂" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-jinsepd/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",金色学堂
+http://192.168.100.1:4022/udp/239.10.0.179:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="财经频道" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-quanqiuxunbao/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",财经频道
+http://192.168.100.1:4022/udp/239.10.0.194:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="健康生活" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-mingyizaixian/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",健康生活
+http://192.168.100.1:4022/udp/239.10.0.139:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="风尚美食" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-fengshangfood/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",风尚美食
+http://192.168.100.1:4022/udp/239.10.0.138:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/20191106jyzh.png" tvg-id="20191106jyzh" tvg-name="教育综合" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/HD-8000k-1080P-chinakepu/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",教育综合
+http://192.168.100.1:4022/udp/239.10.0.136:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/XQ.png" tvg-id="XQ" tvg-name="戏曲" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-xiqu/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",戏曲
+http://192.168.100.1:4022/udp/239.10.0.150:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="快乐垂钓" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-qicaixiju/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",快乐垂钓
+http://192.168.100.1:4022/udp/239.10.0.128:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/20191106cftx.png" tvg-id="20191106cftx" tvg-name="财富天下" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-caifutianxia/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",财富天下
+http://192.168.100.1:4022/udp/239.10.0.182:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/JKYS.png" tvg-id="JKYS" tvg-name="健康养生" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-jiankangys/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",健康养生
+http://192.168.100.1:4022/udp/239.10.0.135:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="东方财经" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-dongfangcj/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",东方财经
+http://192.168.100.1:4022/udp/239.10.0.178:5140
+#KODIPROP:inputstream=inputstream.ffmpegdirect
+#EXTINF:-1 tvg-logo="https://tv.gotonas.com/logo/tiyushenghuo.png" tvg-id="tiyushenghuo" tvg-name="中国天气" catchup="default" catchup-days="5" catchup-source="http://zxhk.scmcc.sctv.com:8089/yst.lookback.scmobile.com/223.87.21.116:8080/ysten-business/lookback/SD-2500k-576P-chinaqixiang/${(b)yyyyMMddHHmmss}/${(e)yyyyMMddHHmmss}/1.m3u8" group-title="其他",中国天气
+http://192.168.100.1:4022/udp/239.10.0.177:5140
 #EXTINF:-1 tvg-name="达州新闻" tvg-logo="" group-title="四川",达州新闻
 http://192.168.100.1:4022/udp/239.10.0.54:5140
 #EXTINF:-1 tvg-name="达州文化生活" tvg-logo="" group-title="四川",达州文化生活
