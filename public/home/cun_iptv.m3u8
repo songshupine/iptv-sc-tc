@@ -33,10 +33,6 @@ http://sc.rrs.169ol.com/PLTV/88888888/224/3221227379/index.m3u8
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227933/index.m3u8
 #EXTINF:-1tvg-id="17"tvg-name="CCTV17",CCTV17
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227577/index.m3u8
-#EXTINF:-1tvg-id="21"tvg-name="CCTV4K",CCTV4K
-http://sc.rrs.169ol.com/PLTV/88888888/224/3221227988/index.m3u8
-#EXTINF:-1tvg-id="18"tvg-name="四川卫视",四川卫视4K
-http://sc.rrs.169ol.com/PLTV/88888888/224/3221228140/index.m3u8
 #EXTINF:-1tvg-id="18"tvg-name="四川卫视",四川卫视
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227417/index.m3u8
 #EXTINF:-1tvg-id="22"tvg-name="SCTV-2",SCTV-2
@@ -161,8 +157,6 @@ http://sc.rrs.169ol.com/PLTV/88888888/224/3221227986/index.m3u8
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227984/index.m3u8
 #EXTINF:-1tvg-id="203"tvg-name="CHC影迷电影",CHC高清影院
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227981/index.m3u8
-#EXTINF:-1tvg-id="204"tvg-name="欢笑剧场4K",欢笑剧场4K
-http://sc.rrs.169ol.com/PLTV/88888888/224/3221227970/index.m3u8
 #EXTINF:-1tvg-id="205"tvg-name="精彩影视",精彩影视
 http://sc.rrs.169ol.com/PLTV/88888888/224/3221227980/index.m3u8
 #EXTINF:-1tvg-id="206"tvg-name="老故事",老故事
